@@ -12,6 +12,8 @@ Business Case:
 Project Goals:
 Identify the features, found in the Wisconsin dataset, that are predictive of malignant breast cancer.
 
+- explore the methods to choose the models and the evaluation methods.
+
 Your findings:
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
 
