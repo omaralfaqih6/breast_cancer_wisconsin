@@ -6,16 +6,34 @@ Team members:
 Below are our team members:
 1- Omar Alfaqih - https://github.com/omaralfaqih6/
 
-Business Case:
+Business Case: - @OA
 1- write a short paragraph to provide context and brief description of the features and the dataset.
+2- Our project is to answer this business question: Which features of a breast mass are predictive of breast cancer diagnosis (malignant vs. benign)?
+3- Our stakeholders are:
+a. clinical doctors - Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
+b. Hospital Management - It will reduce the cost in diagnosing the patient. 
+c. Hospital's Legal department - Avoiding the lawsuits against doctors for consequences of false diagnosis.
+d. Medical Equipment Manufactors - Enabling manufacturers in building more optimized diagnostic panels for collecting the data.
+e. Patients - Interested in being accurately diagnosed to avoid the unnecessary health and psychological effects of false diagnostics.
+f. Ministry of Health - The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.
 
-Project Goals:
+
+Project Goals: @AH
 Identify the features, found in the Wisconsin dataset, that are predictive of malignant breast cancer.
+- explore the methods to choose the models
+ and the evaluation methods at least 3 different models.
+- Find the top-5 feature resposible for the predictions - SHAP mostly
+- 
 
-- explore the methods to choose the models and the evaluation methods.
-
-Your findings:
+Your findings (Results):
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
+- List the names of the 2-3 models
+- List the accuracy of each model
+- The choice of a model (How and why)
+- Work on finding the top-5 features contributed to the predictions
+- Include images and graphes/visuals
+
+Project's Tools and 
 
 Risks Identified & Considerations:
 Dataset findings:
@@ -25,7 +43,7 @@ Dataset findings:
 - 
 Missing Human behavior and deitary issues
 
-Project risks including choosing the model, the evaluation methods, the more different model we evaluate, the better the risk management we'll follow. 
+Project risks including uncertainty, choosing the model, the evaluation methods, the more different model we evaluate, the better the risk management we'll follow. 
 The depednency of the data on the models.
 
 Recommendations:
