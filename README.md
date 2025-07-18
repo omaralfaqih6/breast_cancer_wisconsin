@@ -11,6 +11,13 @@ Our project will have the below scope:
 
 ## Content
 
+Introduction
+Business Case
+Project Goals & Milestones
+Project Reporting
+Considerations and Risk Management
+Recommendations
+Team Members
 
 
 
