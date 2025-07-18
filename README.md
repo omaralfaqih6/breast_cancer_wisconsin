@@ -1,4 +1,22 @@
-# breast_cancer_wisconsin
+# Improving Breast Cancer Diagnostics Project
+
+Our team is dedicated throughout this project to improve the breast cancer diagnostics leveraging machine learning capabilities provided by the latest technologies. 
+Our project will have the below scope:
+- Choose 3 machine learning models and evaluate thier capabilities in predicting the diagnostics.
+- Investigate and engineer a set of features best to perform accuracy and optimized prediction.
+- Provide a list of recommendations and action items to project stakehlders for them leveraging the solution.
+
+> [!NOTE]
+> This initiative is considered to be a research project and a prelude to a pilot project to be implemented at hospitals and cancer clinics.
+
+## Content
+
+
+
+
+
+
+
 This is the project for our Machine Learning project for ML Team #4
 summarizes your team, your project goals, your findings, and any other risks and considerations.
 
@@ -27,8 +45,8 @@ Identify the features, found in the Wisconsin dataset, that are predictive of ma
 
 Your findings (Results):
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
-- List the names of the 2-3 models
-- List the accuracy of each model
+- List the names of the 2-3 models - SVM (Support Vector Machine) & Random Forest Model chosen out of list of 5. @SB
+- List the accuracy of each model - @SB
 - The choice of a model (How and why)
 - Work on finding the top-5 features contributed to the predictions
 - Include images and graphes/visuals
