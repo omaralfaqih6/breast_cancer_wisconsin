@@ -7,7 +7,7 @@ Our project will have the below scope:
 - Provide a list of recommendations and action items to project stakehlders for them leveraging the solution.
 
 > [!NOTE]
-> This initiative is considered to be a research project and a prelude to a pilot project to be implemented at hospitals and cancer clinics.
+> This initiative is considered to be a research project. It is a prelude to a pilot project to be implemented at hospitals and cancer clinics.
 
 ## Content
 
