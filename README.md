@@ -30,7 +30,7 @@ summarizes your team, your project goals, your findings, and any other risks and
 Team members:
 Below are our team members:
 1- Omar Alfaqih - https://github.com/omaralfaqih6/
-2- Sanjeev - https://github.com/budsans
+2- Sanjeev Budhathoki - https://github.com/budsans
 3- Azhar Hasan - https://github.com/azharhasan
 
 Business Case: - @OA
