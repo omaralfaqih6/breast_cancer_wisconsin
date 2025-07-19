@@ -22,40 +22,22 @@ Team Members
 
 
 
+# Business Case
+Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
 
-
-This is the project for our Machine Learning project for ML Team #4
-summarizes your team, your project goals, your findings, and any other risks and considerations.
-
-# Team members
-Below are our team members:
-|Name|GitHub|Roles|Contribution Video|
-|:--:|:--:|:--:|:--:|
-|Sanjeev Budhathoki|https://github.com/budsans|Models Development|
-|Omar Alfaqih|https://github.com/omaralfaqih6/|Result Analysis, Documentation, Model Optimization|
-|Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
-
-
-# Business Case:
 ## Breast Cancer Wisconsin - Dataset Analysis
 This dataset is representing 30 features for 569 samples derived from digitized images of fine-needle aspirate (FNA) tests performed on breast cancer. These features are numerical and continiuos, also, our team had confirmed that none of these features have any missing values.
-Our target variable (the depednent variable) is Diagnosis which has either of the below:
+Our target variable (the depednent variable) is Diagnosis variable which has either of the below values:
 - M: for malignant
 - B: for benign
 
 > [!NOTE]
 > The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 
-
-
-1- write a short paragraph to provide context and brief description of the features and the dataset.
-2- Our project is to answer this business question: Which features of a breast mass are predictive of breast cancer diagnosis (malignant vs. benign)?
-
-
-
 # Stakeholders
 After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
-a. Clinical doctors - Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
+## Clinical doctors
+Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
 b. Hospital Management - It will reduce the cost in diagnosing the patient. 
 c. Hospital's Legal department - Avoiding the lawsuits against doctors for consequences of false diagnosis.
 d. Medical Equipment Manufactors - Enabling manufacturers in building more optimized diagnostic panels for collecting the data.
@@ -63,13 +45,13 @@ e. Patients - Interested in being accurately diagnosed to avoid the unnecessary 
 f. Ministry of Health - The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.
 
 
-Project Goals: @AH
+# Project Goals
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
  - Explore various models to identify 3 models best fit for the problem.
  - Build 3 models using different machine learning techniques and compare their performance.
  - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
 
-Your findings (Results):
+# Project Report
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
 - We read about 5 models listed below to choose 3 models only for our project. These models are the best fit for small datasets:
   - logistic regression
@@ -93,7 +75,7 @@ Your findings (Results):
 
 Project's Tools and 
 
-Risks Identified & Considerations:
+# Risks Identified & Considerations
 Dataset findings:
 - Working with sample dataset
 - Any features missing thaqt can be useful
@@ -104,6 +86,14 @@ Missing Human behavior and deitary issues
 Project risks including uncertainty, choosing the model, the evaluation methods, the more different model we evaluate, the better the risk management we'll follow. 
 The depednency of the data on the models.
 
-Recommendations:
+# Recommendations
 - Provide a list of actionable items to be addressed by your audience, for example, for doctors.
 - Based on the importance of features, highlight the features and what should be done or considered in measuring them.
+
+# Team members
+Below are our team members:
+|Name|GitHub|Roles|Contribution Video|
+|:--:|:--:|:--:|:--:|
+|Sanjeev Budhathoki|https://github.com/budsans|Models Development|
+|Omar Alfaqih|https://github.com/omaralfaqih6/|Result Analysis, Documentation, Model Optimization|
+|Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
