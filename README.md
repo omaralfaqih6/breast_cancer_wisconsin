@@ -56,11 +56,11 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    Logistic Regression-->Performance Evaluation;
-    Support Vector Machine (SVM)-->Performance Evaluation;
-    Random Forest Model (RFM)-->Performance Evaluation;
-    Performance Evaluation-->Choose Best ML Model;
-    Choose Best ML Model-->Finding Top 5 Features;
+    'Logistic Regression'-->'Performance Evaluation';
+    'Support Vector Machine (SVM)'-->'Performance Evaluation';
+    'Random Forest Model (RFM)'-->'Performance Evaluation';
+    'Performance Evaluation-->'Choose Best ML Model;
+    'Choose Best ML Model'-->'Finding Top 5 Features';
 ```
 
 ## Models Selection
