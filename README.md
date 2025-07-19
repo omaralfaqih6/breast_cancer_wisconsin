@@ -30,6 +30,8 @@ summarizes your team, your project goals, your findings, and any other risks and
 Team members:
 Below are our team members:
 1- Omar Alfaqih - https://github.com/omaralfaqih6/
+2- Sanjeev - https://github.com/budsans
+3- Azhar Hasan - https://github.com/azharhasan
 
 Business Case: - @OA
 1- write a short paragraph to provide context and brief description of the features and the dataset.
@@ -44,11 +46,10 @@ f. Ministry of Health - The accurate disgnostics will reduce the cost and the ex
 
 
 Project Goals: @AH
-Identify the features, found in the Wisconsin dataset, that are predictive of malignant breast cancer.
-- explore the methods to choose the models
- and the evaluation methods at least 3 different models.
-- Find the top-5 feature resposible for the predictions - SHAP mostly
-- 
+The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
+ - Explore various models to identify 3 models best fit for the problem
+ - Build 3 models using different machine learning techniques and compare their performance
+ - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models
 
 Your findings (Results):
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
