@@ -19,9 +19,6 @@ Considerations and Risk Management
 Recommendations
 Team Members
 
-
-
-
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
 
@@ -51,29 +48,56 @@ The goal of the project is to identify features that are most predictive of mali
  - Build 3 models using different machine learning techniques and compare their performance.
  - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
 
-# Project Report
-- Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
-- We read about 5 models listed below to choose 3 models only for our project. These models are the best fit for small datasets:
+# Project Report (Finding & Results)
+In this section, our team had listed the project milestones along with the results and the methodologies that we had used to follow though and meet the project goals.
+
+## Project Flow Chart
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    Logistic Regression-->Performance Evaluation;
+    Support Vector Machine (SVM)-->Performance Evaluation;
+    Random Forest Model (RFM)-->Performance Evaluation;
+    Performance Evaluation-->Choose Best ML Model;
+    Choose Best ML Model-->Finding Top 5 Features;
+```
+
+## Models Selection
+Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
   - logistic regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
   - AutoGloun
   - LightGBM
-- Among these 5 models considered, the project team chose 3 models listed below:
+
+Among these listed models, the team had chosen 3 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
  - logistic regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
 
 > [!NOTE]
-> The project team read this article that mentioned the comparison between the models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
+> The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
 
-- List the names of the 3 models - logistic regression, Support Vector Machine (SVM),  & Random Forest Model (RFM) chosen.
-- List the accuracy of each model - @SB
-- The choice of a model (How and why)
-- Work on finding the top-5 features contributed to the predictions
-- Include images and graphes/visuals
+## Data Analysis
+The team had conducted analysis on the dataset which includes the below:
+1. Ensure that the dataset is clean and had no missing values.
+2. Demonstrated the relationships between the features themselves and also with the target variable.
 
-Project's Tools and 
+## ML Models Development
+The project team had development and trained the three models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
+
+### Logistic Regression
+
+### Support Vector Machine (SVM)
+
+### Random Forest Model (RFM)
+
+### Winning ML Model
+This section defined the criteria the project team had used to select the model (The How!), and provide the technical justification (The Why!).
+
+## The Most Important Features - Top 5
+
 
 # Risks Identified & Considerations
 Dataset findings:
@@ -97,3 +121,6 @@ Below are our team members:
 |Sanjeev Budhathoki|https://github.com/budsans|Models Development|
 |Omar Alfaqih|https://github.com/omaralfaqih6/|Result Analysis, Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
+
+# Further Readings
+Below are the links mentioned in this article for further readings and advanced research.
