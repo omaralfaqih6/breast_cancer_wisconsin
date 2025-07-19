@@ -38,20 +38,12 @@ Our target variable (the depednent variable) is Diagnosis variable which has eit
 After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
 |Stakeholder|Interest|
 |:-----:|------|
-|Clinical doctors|Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients.|
-| Hospital Management | This initiative will reduce the cost in diagnosing the patient.|
-| Hospital's Legal department | Avoiding the lawsuits against doctors for consequences of false diagnosis.|
-|Medical Equipment Manufactors|Enabling manufacturers in building more optimized diagnostic panels for collecting the data.|
-|Patients|Interested in being accurately diagnosed to avoid the unnecessary health and psychological effects of false diagnostics.|
+|Patients|Patients are at the top of the list as their life is depedent on the accuracy of the diagnosis. The more accuraly diagnozed, patients will receive the required treatment in the shortest period of time, and may be the reason for saving their lives in certain cases.|
+|Clinical doctors|Their interest in the project is knowing the most important features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients.|
+|Medical Equipment Manufactors|This initiative will enable the manufacturers building more optimized diagnostic panels for collecting the data.|
+|Hospital Management|The management are interested in reducing the diagnostics costs and consequentally the patient's treament. This goal of this initiative is firmly aligned with this interest as finding the most important features will result in a more optimized diagnostic approach. This will consequently lead to more accurate diagnostics, better treatment and reduced cost.|
+|Hospital's Legal department | The more optimized diagnostics approach will increase the accuracy of the diagnostic, thereby, avoiding the lawsuits against doctors and the hospital due to consequences of false diagnosis.|
 |Ministry of Health|The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.|
-
-- Clinical doctors - their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
-- Hospital Management - This initiative will reduce the cost in diagnosing the patient. 
-- Hospital's Legal department - Avoiding the lawsuits against doctors for consequences of false diagnosis.
-- Medical Equipment Manufactors - Enabling manufacturers in building more optimized diagnostic panels for collecting the data.
-- Patients - Interested in being accurately diagnosed to avoid the unnecessary health and psychological effects of false diagnostics.
-- Ministry of Health - The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.
-
 
 # Project Goals
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
