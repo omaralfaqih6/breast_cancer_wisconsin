@@ -36,13 +36,16 @@ Our target variable (the depednent variable) is Diagnosis variable which has eit
 
 # Stakeholders
 After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
-## Clinical doctors
-Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
-b. Hospital Management - It will reduce the cost in diagnosing the patient. 
-c. Hospital's Legal department - Avoiding the lawsuits against doctors for consequences of false diagnosis.
-d. Medical Equipment Manufactors - Enabling manufacturers in building more optimized diagnostic panels for collecting the data.
-e. Patients - Interested in being accurately diagnosed to avoid the unnecessary health and psychological effects of false diagnostics.
-f. Ministry of Health - The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.
+|Stakeholder|Interest|
+|:-----:|:------|
+|Clinical doctors|Their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients.|
+
+- Clinical doctors - their interest in the project is knowing the exact features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients. 
+- Hospital Management - This initiative will reduce the cost in diagnosing the patient. 
+- Hospital's Legal department - Avoiding the lawsuits against doctors for consequences of false diagnosis.
+- Medical Equipment Manufactors - Enabling manufacturers in building more optimized diagnostic panels for collecting the data.
+- Patients - Interested in being accurately diagnosed to avoid the unnecessary health and psychological effects of false diagnostics.
+- Ministry of Health - The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.
 
 
 # Project Goals
