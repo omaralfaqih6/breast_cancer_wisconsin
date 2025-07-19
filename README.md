@@ -47,13 +47,27 @@ f. Ministry of Health - The accurate disgnostics will reduce the cost and the ex
 
 Project Goals: @AH
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
- - Explore various models to identify 3 models best fit for the problem
- - Build 3 models using different machine learning techniques and compare their performance
- - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models
+ - Explore various models to identify 3 models best fit for the problem.
+ - Build 3 models using different machine learning techniques and compare their performance.
+ - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
 
 Your findings (Results):
 - Refine the project and identify which features for their significance(top 3 or 5), and the reason & the criteria on choosing.
-- List the names of the 2-3 models - SVM (Support Vector Machine) & Random Forest Model chosen out of list of 5. @SB
+- We read about 5 models listed below to choose 3 models only for our project. These models are the best fit for small datasets:
+  - logistic regression
+  - Support Vector Machine (SVM)
+  - Random Forest Model (RFM)
+  - AutoGloun
+  - LightGBM
+- Among these 5 models considered, the project team chose 3 models listed below:
+ - logistic regression
+ - Support Vector Machine (SVM)
+ - Random Forest Model (RFM)
+
+> [!NOTE]
+> The project team read this article that mentioned the comparison between the models that are most suitable and fit for this dataset. The article is found here. (https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
+
+- List the names of the 3 models - logistic regression, Support Vector Machine (SVM),  & Random Forest Model (RFM) chosen.
 - List the accuracy of each model - @SB
 - The choice of a model (How and why)
 - Work on finding the top-5 features contributed to the predictions
