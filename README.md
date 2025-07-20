@@ -52,26 +52,29 @@ The goal of the project is to identify features that are most predictive of mali
 In this section, our team had listed the project milestones along with the results and the methodologies that we had used to follow though and meet the project goals.
 
 ## Project Flow Chart
-Here is a simple flow chart:
+To have a better visualization of the project phases and milestones, our project team had created the below flow chart:
 
 ```mermaid
 graph TD;
-    A(["Logistic Regression"]);
-    B(["Random Forest Model (RFM)"]);
-    C(["Support Vector Machine (SVM)"]);
-    D(["Performance Evaluation"]);
-    A-->D;
-    B-->D;
+    A(["Models Selection"]);
+    B(["Data Analysis"]);
+    C(["Models Development"]);
+    D(["Logistic Regression"]);
+    E(["Random Forest Model (RFM)"]);
+    F(["Support Vector Machine (SVM)"]);
+    A-->B;
+    B-->C;
     C-->D;
-    D-->E{"Choose Best ML Model"};
-    E-->F(["Top 5 Important Features"])
+    C-->E;
+    C-->F;
+    D-->G{"Choose Best ML Model"};
+    E-->G;
+    F-->G;
+    G-->H(["Top 5 Important Features"]);
     
 ```
-[Logistic Regression]-->[Performance Evaluation];
-    'Support Vector Machine (SVM)'-->'Performance Evaluation';
-    'Random Forest Model (RFM)'-->'Performance Evaluation';
-    'Performance Evaluation-->'Choose Best ML Model;
-    'Choose Best ML Model'-->'Finding Top 5 Features';
+
+
 ## Models Selection
 Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
   - logistic regression
