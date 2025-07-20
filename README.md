@@ -52,7 +52,7 @@ The goal of the project is to identify features that are most predictive of mali
 In this section, our team had listed the project milestones along with the results and the methodologies that we had used to follow though and meet the project goals.
 
 ## Project Flow Chart
-To have a better visualization of the project phases and milestones, our project team had created the below flow chart:
+To have a better visualization of the project phases and milestones, our project team had created the below flow chart. In every section, the project team will provide the detailed analysis following the logical flow of the process:
 
 ```mermaid
 graph TD;
@@ -74,7 +74,6 @@ graph TD;
     H-->I(["Recommendations"]);
     
 ```
-
 
 ## Models Selection
 Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
