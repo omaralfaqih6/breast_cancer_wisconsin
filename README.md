@@ -56,13 +56,15 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    [Logistic Regression]-->[Performance Evaluation];
+    A(["Logistic Regression"]);
+    B(["Performance Evaluation"]);
+    A-->B;
+```
+[Logistic Regression]-->[Performance Evaluation];
     'Support Vector Machine (SVM)'-->'Performance Evaluation';
     'Random Forest Model (RFM)'-->'Performance Evaluation';
     'Performance Evaluation-->'Choose Best ML Model;
     'Choose Best ML Model'-->'Finding Top 5 Features';
-```
-
 ## Models Selection
 Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
   - logistic regression
