@@ -57,14 +57,14 @@ Here is a simple flow chart:
 ```mermaid
 graph TD;
     A(["Logistic Regression"]);
-    B(["Performance Evaluation"]);
+    B(["Random Forest Model (RFM)"]);
     C(["Support Vector Machine (SVM)"]);
     D(["Performance Evaluation"]);
     A-->D;
     B-->D;
     C-->D;
     D-->E{"Choose Best ML Model"};
-    E-->F(["Finding Top 5 Features"])
+    E-->F(["Top 5 Important Features"])
     
 ```
 [Logistic Regression]-->[Performance Evaluation];
