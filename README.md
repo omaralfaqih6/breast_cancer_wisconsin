@@ -58,7 +58,14 @@ Here is a simple flow chart:
 graph TD;
     A(["Logistic Regression"]);
     B(["Performance Evaluation"]);
-    A-->B;
+    C(["Support Vector Machine (SVM)"]);
+    D(["Performance Evaluation"]);
+    A-->D;
+    B-->D;
+    C-->D;
+    D-->E{"Choose Best ML Model"};
+    E-->F(["Finding Top 5 Features"])
+    
 ```
 [Logistic Regression]-->[Performance Evaluation];
     'Support Vector Machine (SVM)'-->'Performance Evaluation';
