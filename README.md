@@ -114,15 +114,28 @@ This section defined the criteria the project team had used to select the model 
 
 
 # Risks Identified & Considerations
-Dataset findings:
-- Working with sample dataset
-- Any features missing thaqt can be useful
-- The method of acquisition the data, ease of measuring the data. 
-- 
-Missing Human behavior and deitary issues
 
-Project risks including uncertainty, choosing the model, the evaluation methods, the more different model we evaluate, the better the risk management we'll follow. 
-The depednency of the data on the models.
+The project was a great learning exercise and it truly highlighted how building effective machine learning models goes far beyond algorithm selection. Understanding the data source, identifying its limitations, managing bias and correlation, and selecting the right evaluation metrics are all critical steps toward developing responsible, trustworthy models. Below are some of the risk that we identified with our approach:
+
+1. Sample Dataset Limitations:
+The WDBC dataset was collected from a specific clinical setting in Wisconsin, and as such, it may not represent the broader population across different regions, age groups, ethnicities, or healthcare environments. This introduces sampling bias, which limits the model’s ability to generalize to diverse patient populations. Therefore, this dataset may not fully meet the needs of all stakeholders identified earlier in this document.
+
+2. High Feature Correlation:
+During our exploratory data analysis, we noticed a strong correlation between several features, especially radius, perimeter, and area. These are all size-related and mathematically linked, which can lead to multicollinearity—where redundant information reduces model stability and interpretability. To manage this, we applied techniques such as feature selection, principal component analysis (PCA), and regularization to reduce redundancy and improve generalization.
+
+3. Missing Human-centered Attributes from the Data:
+While the dataset provides detailed physical features of the tumor cells, it lacks important features such as patient history, genetics, lifestyle factors, and dietary habits. These human-centered attributes can significantly influence diagnostic outcomes and their absence could limit the real-world accuracy and fairness of the model.
+
+4. Measurement and Data Acquisition Bias:
+The features in this dataset are derived from digitized images, meaning that inconsistencies in measurement devices, individuals involved, resolution and lighting could also affect data quality. This variability can introduce noise, reducing the reliability and repeatability of predictions.
+
+5. Model Selection and Evaluation Strategy:
+While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees and support vector machines (SVM). To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
+In a medical context where accuracy alone is not enough, we used metrics like precision, recall, F1-score, and ROC-AUC, especially to minimize false negatives, where a malignant tumor might be misclassified as benign—an outcome that carries serious clinical risk.
+
+6. Dependency on Data Quality:
+Most machine learning models are highly sensitive to the quality and structure of the training data. Noise, missing values, and inconsistent feature scaling can significantly reduce model performance. We ensured rigorous data cleaning, normalization, and outlier handling in our preprocessing pipeline to mitigate this risk.
+
 
 # Recommendations
 - Provide a list of actionable items to be addressed by your audience, for example, for doctors.
