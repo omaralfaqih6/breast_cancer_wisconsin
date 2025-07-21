@@ -62,16 +62,18 @@ graph TD;
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
+    G(["Performance Evaluation])
     A-->B;
     B-->C;
     C-->D;
     C-->E;
     C-->F;
-    D-->G{"Choose Best ML Model"};
+    D-->G;    
     E-->G;
     F-->G;
-    G-->H(["Top 5 Important Features"]);
-    H-->I(["Recommendations"]);
+    G-->H{"Which Model?"};
+    H-->I(["Top 5 Important Features"]);
+    I-->J(["Recommendations"]);
     
 ```
 
