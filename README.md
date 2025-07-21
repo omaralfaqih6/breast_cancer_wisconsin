@@ -62,7 +62,7 @@ graph TD;
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
-    G(["Performance Evaluation])
+    G(["Performance Evaluation]);
     A-->B;
     B-->C;
     C-->D;
