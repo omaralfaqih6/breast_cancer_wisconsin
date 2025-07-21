@@ -57,8 +57,8 @@ To have a better visualization of the project phases and milestones, our project
 ```mermaid
 graph TD;
     A(["Models Selection"]);
-    B(["Data Analysis"]);
-    C(["Models Development"]);
+    B(["Dataset Analysis"]);
+    C(["Models Training & Testing"]);
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
