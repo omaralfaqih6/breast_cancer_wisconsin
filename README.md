@@ -97,7 +97,7 @@ The team had conducted analysis on the dataset which includes the below:
 1. Ensure that the dataset is clean and had no missing values.
 2. Demonstrated the relationships between the features themselves and also with the target variable.
 
-## ML Models Development
+## Models Development & Training
 The project team had development and trained the three models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
 
 ### Logistic Regression
