@@ -62,7 +62,7 @@ graph TD;
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
-    G(["Performance Evaluation]);
+    G(["Performance Evaluation"]);
     A-->B;
     B-->C;
     C-->D;
@@ -74,7 +74,6 @@ graph TD;
     G-->H{"Which Model?"};
     H-->I(["Top 5 Important Features"]);
     I-->J(["Recommendations"]);
-    
 ```
 
 ## Models Selection
