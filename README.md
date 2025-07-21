@@ -58,7 +58,7 @@ To have a better visualization of the project phases and milestones, our project
 graph TD;
     A(["Models Selection"]);
     B(["Dataset Analysis"]);
-    C(["Models Training & Testing"]);
+    C(["Models Development & Training"]);
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
@@ -72,7 +72,7 @@ graph TD;
     E-->G;
     F-->G;
     G-->H{"Choose Best Performing Model"};
-    H-->I(["Top 5 Important Features"]);
+    H-->I(["Top 5 Most Important Features"]);
     I-->J(["Recommendations"]);
 ```
 
@@ -102,14 +102,15 @@ The project team had development and trained the three models on the dataset. Ev
 
 ### Logistic Regression
 
+### Random Forest Model (RFM)
+
 ### Support Vector Machine (SVM)
 
-### Random Forest Model (RFM)
 
 ### Winning ML Model
 This section defined the criteria the project team had used to select the model (The How!), and provide the technical justification (The Why!).
 
-## The Most Important Features - Top 5
+## Top 5 Most Important Features
 
 
 # Risks Identified & Considerations
