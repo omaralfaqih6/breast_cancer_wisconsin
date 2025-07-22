@@ -22,15 +22,6 @@ Team Members
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
 
-## Breast Cancer Wisconsin - Dataset Analysis
-This dataset is representing 30 features for 569 samples derived from digitized images of fine-needle aspirate (FNA) tests performed on breast cancer. These features are numerical and continiuos, also, our team had confirmed that none of these features have any missing values.
-Our target variable (the depednent variable) is Diagnosis variable which has either of the below values:
-- M: for malignant
-- B: for benign
-
-> [!NOTE]
-> The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
-
 # Stakeholders
 After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
 |Stakeholder|Interest|
@@ -93,9 +84,20 @@ Among these listed models, the team had chosen 3 models for our project. These m
 > The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
 
 ## Data Analysis
+This dataset is representing 30 features for 569 samples derived from digitized images of fine-needle aspirate (FNA) tests performed on breast cancer. These features are numerical and continiuos, also, our team had confirmed that none of these features have any missing values.
+Our target variable (the depednent variable) is Diagnosis variable which has either of the below values:
+- M: for malignant
+- B: for benign
+
+> [!NOTE]
+> The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
+
+
 The team had conducted analysis on the dataset which includes the below:
 1. Ensure that the dataset is clean and had no missing values.
 2. Demonstrated the relationships between the features themselves and also with the target variable.
+
+Add the features correlation removal.
 
 ## Models Development & Training
 The project team had development and trained the three models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
@@ -106,9 +108,13 @@ The project team had development and trained the three models on the dataset. Ev
 
 ### Support Vector Machine (SVM)
 
+## Performance Evaluation
+List which model is chosen ( which is RFM)
 
-### Winning ML Model
+## Choose Best Performing Model
 This section defined the criteria the project team had used to select the model (The How!), and provide the technical justification (The Why!).
+Please include the CV 
+
 
 ## Top 5 Most Important Features
 
@@ -141,13 +147,16 @@ Most machine learning models are highly sensitive to the quality and structure o
 - Provide a list of actionable items to be addressed by your audience, for example, for doctors.
 - Based on the importance of features, highlight the features and what should be done or considered in measuring them.
 
+- If we have more time on the project, what can we do more/enhance?
+
 # Team members
 Below are our team members:
 |Name|GitHub|Roles|Contribution Video|
 |:--:|:--:|:--:|:--:|
 |Sanjeev Budhathoki|https://github.com/budsans|Models Development|
-|Omar Alfaqih|https://github.com/omaralfaqih6/|Result Analysis, Documentation, Model Optimization|
+|Omar Alfaqih|https://github.com/omaralfaqih6/|, Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
+|Oni | |Result Analysis | 
 
 # Further Readings
 Below are the links mentioned in this article for further readings and advanced research.
