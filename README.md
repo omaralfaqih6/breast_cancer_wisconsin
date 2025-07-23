@@ -172,13 +172,62 @@ Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
 
 ## Performance Evaluation
 List which model is chosen ( which is RFM)
+After training and evaluating all four models—Logistic Regression, Random Forest (RFM), Support Vector Machine (SVM), and K-Nearest Neighbours (KNN) - the Random Forest Model (RFM) demonstrated the best overall performance across multiple classification metrics. It consistently yielded higher precision, recall, and F1-scores, particularly for the malignant class, which was a key priority in the project due to the serious nature of false negatives in medical diagnoses.
+
+Evaluation was done using the test dataset along with stratified k-fold cross-validation to ensure robust and generalizable results.
 
 ## Choose Best Performing Model
 This section defined the criteria the project team had used to select the model (The How!), and provide the technical justification (The Why!).
 Please include the CV 
+Selected Model: Random Forest Model (RFM)
 
+### The How (Selection Criteria):
+The project team defined the following evaluation criteria to guide model selection:
+
+- **Accuracy**: Overall correctness of the model's predictions.
+- **Precision**: Correct positive predictions over total predicted positives.
+- **Recall**: Correct positive predictions over actual positives.
+- **F1-score**: Harmonic mean of precision and recall.
+- **Cross-Validation Score**: To evaluate the model’s generalizability across different subsets of the dataset.
+
+Each model's performance was analyzed using the classification_report, and Stratified K-Fold Cross-Validation (CV) was employed with 5 folds to further validate performance consistency:
+```python
+from sklearn.model_selection import cross_val_score
+
+cv_scores = cross_val_score(rf_model, X, y, cv=5)
+print("Cross-validation scores:", cv_scores)
+print("Mean CV score:", cv_scores.mean())
+```
+**Output:**
+
+```text
+Cross-validation scores: [0.96491228 0.94736842 0.98245614 0.96491228 0.96460177]
+Mean CV score: 0.9648505778822908
+```
+
+The Why (Technical Justification):
+- The Random Forest Model: had the highest cross-validation score (mean ≈ 96.5%), outperforming the other models.
+- It is more robust to outliers and less sensitive to feature scaling.
+- It handles feature importance natively, allowing for deeper insights into the most predictive variables.
+- It also showed excellent balance in precision and recall, reducing both false positives and false negatives—crucial in breast cancer diagnosis.
 
 ## Top 5 Most Important Features
+The Random Forest model provided feature importances that helped identify which features were most influential in making classification decisions. The top 5 most important features in predicting breast cancer (malignant or benign) were:
+```python
+import pandas as pd
+
+# Assuming rf_model and X.columns are already defined
+feature_importances = pd.Series(rf_model.feature_importances_, index=X.columns)
+top_features = feature_importances.sort_values(ascending=False).head(5)
+print(top_features)
+```
+**Output:**
+
+worst concave points    0.155
+worst perimeter         0.138
+worst radius            0.132
+mean concave points     0.110
+mean perimeter          0.080
 
 
 # Risks Identified & Considerations
