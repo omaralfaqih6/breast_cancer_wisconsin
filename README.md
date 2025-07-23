@@ -143,7 +143,7 @@ While the dataset provides detailed physical features of the tumor cells, it lac
 The features in this dataset are derived from digitized images, meaning that inconsistencies in measurement devices, individuals involved, resolution and lighting could also affect data quality. This variability can introduce noise, reducing the reliability and repeatability of predictions.
 
 5. Model Selection and Evaluation Strategy:
-While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees and support vector machines (SVM). To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
+While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees, support vector machines (SVM) and KNN. To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
 In a medical context where accuracy alone is not enough, we used metrics like precision, recall, F1-score, and ROC-AUC, especially to minimize false negatives, where a malignant tumor might be misclassified as benign—an outcome that carries serious clinical risk.
 
 6. Dependency on Data Quality:
@@ -153,8 +153,10 @@ Most machine learning models are highly sensitive to the quality and structure o
 # Recommendations
 - Provide a list of actionable items to be addressed by your audience, for example, for doctors.
 - Based on the importance of features, highlight the features and what should be done or considered in measuring them.
+- In future cancer identification projects, additional data like cell colour, relative position, density, etc. could be added into the dataset - considering the advances in imaging technology from the publication date (1992) to now (2025)
 
 - If we have more time on the project, what can we do more/enhance?
+
 
 # Team members
 Below are our team members:
@@ -168,3 +170,4 @@ Below are our team members:
 
 # Further Readings
 Below are the links mentioned in this article for further readings and advanced research.
+https://www.semanticscholar.org/paper/Nuclear-feature-extraction-for-breast-tumor-Street-Wolberg/53f0fbb425bc14468eb3bf96b2e1d41ba8087f36
