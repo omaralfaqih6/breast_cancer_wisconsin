@@ -124,10 +124,19 @@ Please include the CV
 The project was a great learning exercise and it truly highlighted how building effective machine learning models goes far beyond algorithm selection. Understanding the data source, identifying its limitations, managing bias and correlation, and selecting the right evaluation metrics are all critical steps toward developing responsible, trustworthy models. Below are some of the risk that we identified with our approach:
 
 1. Sample Dataset Limitations:
-The WDBC dataset was collected from a specific clinical setting in Wisconsin, and as such, it may not represent the broader population across different regions, age groups, ethnicities, or healthcare environments. This introduces sampling bias, which limits the model’s ability to generalize to diverse patient populations. Therefore, this dataset may not fully meet the needs of all stakeholders identified earlier in this document.
+The Wisconsin Diagnostic Breast Cancer (WDBC) dataset, commonly used in medical research, has several notable limitations. It includes only 569 samples, which restricts its representativeness and can lead to less reliable results. 
+The dataset also has a moderate class imbalance, with 357 benign and 212 malignant cases, potentially skewing outcomes toward the majority class if not addressed. 
+Additionally, it originates from a single institution—the University of Wisconsin Hospitals—introducing geographical and institutional bias that may not reflect diverse patient populations.
+
+The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
+This limits its applicability for advanced diagnostic techniques. It also excludes patient demographic details, such as age, genetic factors, or family history, which are critical for personalized diagnostics or subgroup analysis.
+
+
 
 2. High Feature Correlation:
-During our exploratory data analysis, we noticed a strong correlation between several features, especially radius, perimeter, and area. These are all size-related and mathematically linked, which can lead to multicollinearity—where redundant information reduces model stability and interpretability. To manage this, we applied techniques such as feature selection, principal component analysis (PCA), and regularization to reduce redundancy and improve generalization.
+The correlation heatmap shows strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
+Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models.
+This strong multicollinearity among certain groups suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy in subsequent modeling.
 
 3. Missing Human-centered Attributes from the Data:
 While the dataset provides detailed physical features of the tumor cells, it lacks important features such as patient history, genetics, lifestyle factors, and dietary habits. These human-centered attributes can significantly influence diagnostic outcomes and their absence could limit the real-world accuracy and fairness of the model.
@@ -156,7 +165,7 @@ Below are our team members:
 |Sanjeev Budhathoki|https://github.com/budsans|Models Development|
 |Omar Alfaqih|https://github.com/omaralfaqih6/|, Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
-|Oni | |Result Analysis | 
+|Olalekan Oni |https://github.com/oniolalekan |Result Analysis | 
 
 # Further Readings
 Below are the links mentioned in this article for further readings and advanced research.
