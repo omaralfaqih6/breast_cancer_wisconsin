@@ -35,8 +35,8 @@ After investigating and analyzing the medical field, we had found that below are
 
 # Project Goals
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
- - Explore various models to identify 3 models best fit for the problem.
- - Build 3 models using different machine learning techniques and compare their performance.
+ - Explore various models to identify 4 models best fit for the problem.
+ - Build 4 models using different machine learning techniques and compare their performance.
  - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
 
 # Project Flow Chart
@@ -57,6 +57,7 @@ graph TD;
     C-->D;
     C-->E;
     C-->F;
+    C-->G;
     D-->H;    
     E-->H;
     F-->H;
