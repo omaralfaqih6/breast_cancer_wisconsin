@@ -2,7 +2,7 @@
 
 Our team is dedicated throughout this project to improve the breast cancer diagnostics leveraging machine learning capabilities provided by the latest technologies. 
 Our project will have the below scope:
-- Choose 3 machine learning models and evaluate thier capabilities in predicting the diagnostics of patients as benign or malignant.
+- Choose 4 machine learning models and evaluate thier capabilities in predicting the diagnostics of patients as benign or malignant.
 - Investigate and engineer a set of features best to perform accuracy and optimized prediction.
 - Provide a list of recommendations and action items to project stakehlders for them leveraging the data-driven solution to enhance cancer diagnostics.
 
@@ -50,35 +50,39 @@ graph TD;
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
-    G(["Performance Evaluation"]);
+    G(["K-Nearest Neighbours (KNN)"]);
+    H(["Performance Evaluation"]);
     A-->B;
     B-->C;
     C-->D;
     C-->E;
     C-->F;
-    D-->G;    
-    E-->G;
-    F-->G;
-    G-->H{"Choose Best Performing Model"};
-    H-->I(["Top 5 Most Important Features"]);
-    I-->J(["Recommendations"]);
+    D-->H;    
+    E-->H;
+    F-->H;
+    G-->H;
+    H-->I{"Choose Best Performing Model"};
+    I-->J(["Top 5 Most Important Features"]);
+    J-->K(["Recommendations"]);
 ```
 
 # Project Report (Finding & Results)
 In this section, our team had listed the project milestones along with the results and the methodologies that we had used to follow though and meet the project goals.
 
 ## Models Selection
-Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
+Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 6 potential ML models listed below:
   - logistic regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
+  - K-Nearest Neighbours (KNN)
   - AutoGloun
   - LightGBM
 
-Among these listed models, the team had chosen 3 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
+Among these listed models, the team had chosen 4 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
  - logistic regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
+ - K-Nearest Neighbours (KNN)
 
 > [!NOTE]
 > The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
@@ -100,13 +104,15 @@ The team had conducted analysis on the dataset which includes the below:
 Add the features correlation removal.
 
 ## Models Development & Training
-The project team had development and trained the three models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
+The project team had development and trained the four models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
 
 ### Logistic Regression
 
 ### Random Forest Model (RFM)
 
 ### Support Vector Machine (SVM)
+
+### K-Nearest Neighbours (KNN)
 
 ## Performance Evaluation
 List which model is chosen ( which is RFM)
@@ -157,6 +163,7 @@ Below are our team members:
 |Omar Alfaqih|https://github.com/omaralfaqih6/|, Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
 |Oni | |Result Analysis | 
+|Kirby Lin|https://github.com/klin093|KNN, Proofreading| 
 
 # Further Readings
 Below are the links mentioned in this article for further readings and advanced research.
