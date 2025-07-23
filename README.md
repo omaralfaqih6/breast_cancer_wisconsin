@@ -105,15 +105,70 @@ The team had conducted analysis on the dataset which includes the below:
 Add the features correlation removal.
 
 ## Models Development & Training
-The project team had development and trained the four models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
+The project team developed and trained four classification models using the prepared dataset: Logistic Regression, Random Forest, Support Vector Machine (SVM), and K-Nearest Neighbours (KNN). Each model was evaluated using standard performance metrics to identify the best-performing model for the task.
+
+The subsections below describe the Python implementation and evaluation approach for each model.
 
 ### Logistic Regression
+The Logistic Regression model was trained using scikit-learn's LogisticRegression class. The data was split using stratified train-test splitting to ensure balanced class representation. Feature scaling was applied to normalize the inputs.
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+
+lr_model = LogisticRegression()
+lr_model.fit(X_train_scaled, y_train)
+y_pred_lr = lr_model.predict(X_test_scaled)
+
+print(confusion_matrix(y_test, y_pred_lr))
+print(classification_report(y_test, y_pred_lr))
+```
+
+Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
 
 ### Random Forest Model (RFM)
+The Random Forest Classifier was trained using scikit-learn’s RandomForestClassifier. This ensemble method uses multiple decision trees to improve prediction accuracy and control overfitting.
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+rf_model = RandomForestClassifier()
+rf_model.fit(X_train, y_train)
+y_pred_rf = rf_model.predict(X_test)
+
+print(confusion_matrix(y_test, y_pred_rf))
+print(classification_report(y_test, y_pred_rf))
+```
+
+Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
+
 
 ### Support Vector Machine (SVM)
+The SVM model was trained using the radial basis function (RBF) kernel, which is well-suited for non-linear classification tasks. Prior to training, the dataset was scaled using standardization.
+```python
+from sklearn.svm import SVC
+
+svm_model = SVC(kernel='rbf')
+svm_model.fit(X_train_scaled, y_train)
+y_pred_svm = svm_model.predict(X_test_scaled)
+
+print(confusion_matrix(y_test, y_pred_svm))
+print(classification_report(y_test, y_pred_svm))
+```
+Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
 
 ### K-Nearest Neighbours (KNN)
+The KNN classifier was implemented with a default k=5. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+knn_model = KNeighborsClassifier(n_neighbors=5)
+knn_model.fit(X_train_scaled, y_train)
+y_pred_knn = knn_model.predict(X_test_scaled)
+
+print(confusion_matrix(y_test, y_pred_knn))
+print(classification_report(y_test, y_pred_knn))
+```
+Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
 
 ## Performance Evaluation
 List which model is chosen ( which is RFM)
