@@ -2,7 +2,7 @@
 
 Our team is dedicated throughout this project to improve the breast cancer diagnostics leveraging machine learning capabilities provided by the latest technologies. 
 Our project will have the below scope:
-- Choose 3 machine learning models and evaluate thier capabilities in predicting the diagnostics of patients as benign or malignant.
+- Choose 4 machine learning models and evaluate thier capabilities in predicting the diagnostics of patients as benign or malignant.
 - Investigate and engineer a set of features best to perform accuracy and optimized prediction.
 - Provide a list of recommendations and action items to project stakehlders for them leveraging the data-driven solution to enhance cancer diagnostics.
 
@@ -35,8 +35,8 @@ After investigating and analyzing the medical field, we had found that below are
 
 # Project Goals
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
- - Explore various models to identify 3 models best fit for the problem.
- - Build 3 models using different machine learning techniques and compare their performance.
+ - Explore various models to identify 4 models best fit for the problem.
+ - Build 4 models using different machine learning techniques and compare their performance.
  - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
 
 # Project Flow Chart
@@ -50,35 +50,40 @@ graph TD;
     D(["Logistic Regression"]);
     E(["Random Forest Model (RFM)"]);
     F(["Support Vector Machine (SVM)"]);
-    G(["Performance Evaluation"]);
+    G(["K-Nearest Neighbours (KNN)"]);
+    H(["Performance Evaluation"]);
     A-->B;
     B-->C;
     C-->D;
     C-->E;
     C-->F;
-    D-->G;    
-    E-->G;
-    F-->G;
-    G-->H{"Choose Best Performing Model"};
-    H-->I(["Top 5 Most Important Features"]);
-    I-->J(["Recommendations"]);
+    C-->G;
+    D-->H;    
+    E-->H;
+    F-->H;
+    G-->H;
+    H-->I{"Choose Best Performing Model"};
+    I-->J(["Top 5 Most Important Features"]);
+    J-->K(["Recommendations"]);
 ```
 
 # Project Report (Finding & Results)
 In this section, our team had listed the project milestones along with the results and the methodologies that we had used to follow though and meet the project goals.
 
 ## Models Selection
-Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 5 potential ML models listed below:
+Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 6 potential ML models listed below:
   - logistic regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
+  - K-Nearest Neighbours (KNN)
   - AutoGloun
   - LightGBM
 
-Among these listed models, the team had chosen 3 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
+Among these listed models, the team had chosen 4 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
  - logistic regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
+ - K-Nearest Neighbours (KNN)
 
 > [!NOTE]
 > The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
@@ -100,13 +105,15 @@ The team had conducted analysis on the dataset which includes the below:
 Add the features correlation removal.
 
 ## Models Development & Training
-The project team had development and trained the three models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
+The project team had development and trained the four models on the dataset. Every section below will show the Python code used for every model and the performance criteria used to select the best performing model.
 
 ### Logistic Regression
 
 ### Random Forest Model (RFM)
 
 ### Support Vector Machine (SVM)
+
+### K-Nearest Neighbours (KNN)
 
 ## Performance Evaluation
 List which model is chosen ( which is RFM)
@@ -145,7 +152,7 @@ While the dataset provides detailed physical features of the tumor cells, it lac
 The features in this dataset are derived from digitized images, meaning that inconsistencies in measurement devices, individuals involved, resolution and lighting could also affect data quality. This variability can introduce noise, reducing the reliability and repeatability of predictions.
 
 5. Model Selection and Evaluation Strategy:
-While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees and support vector machines (SVM). To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
+While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees, support vector machines (SVM) and KNN. To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
 In a medical context where accuracy alone is not enough, we used metrics like precision, recall, F1-score, and ROC-AUC, especially to minimize false negatives, where a malignant tumor might be misclassified as benign—an outcome that carries serious clinical risk.
 
 6. Dependency on Data Quality:
@@ -155,17 +162,21 @@ Most machine learning models are highly sensitive to the quality and structure o
 # Recommendations
 - Provide a list of actionable items to be addressed by your audience, for example, for doctors.
 - Based on the importance of features, highlight the features and what should be done or considered in measuring them.
+- In future cancer identification projects, additional data like cell colour, relative position, density, etc. could be added into the dataset - considering the advances in imaging technology from the publication date (1992) to now (2025)
 
 - If we have more time on the project, what can we do more/enhance?
+
 
 # Team members
 Below are our team members:
 |Name|GitHub|Roles|Contribution Video|
 |:--:|:--:|:--:|:--:|
-|Sanjeev Budhathoki|https://github.com/budsans|Models Development|
-|Omar Alfaqih|https://github.com/omaralfaqih6/|, Documentation, Model Optimization|
+|Sanjeev Budhathoki|https://github.com/budsans | Models Development|
+|Omar Alfaqih|https://github.com/omaralfaqih6/ | Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
-|Olalekan Oni |https://github.com/oniolalekan |Result Analysis | 
+|Olalekan Oni |https://github.com/oniolalekan |Result Analysis|
+|Kirby Lin|https://github.com/klin093 | KNN, Proofreading| 
 
 # Further Readings
 Below are the links mentioned in this article for further readings and advanced research.
+https://www.semanticscholar.org/paper/Nuclear-feature-extraction-for-breast-tumor-Street-Wolberg/53f0fbb425bc14468eb3bf96b2e1d41ba8087f36
