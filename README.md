@@ -94,7 +94,7 @@ The Wisconsin Diagnostic Breast Cancer (WDBC) dataset was designed to distinguis
 Distribution of Diagnosis Outcomes
 The dataset consists of a total of 569 instances of breast cancer, categorized into malignant (M) and benign (B) tumors. Out of these, 357 cases (62.7%) are benign and 212 cases (37.3%) are malignant. 
 <p align="center">
-  <img width="460" height="300" src="./Plots/benign_malignant.png">
+  <src="./Plots/benign_malignant.png">
 </p>
 #![benign_malignant](Plots/benign_malignant.png)
 - M: for malignant
