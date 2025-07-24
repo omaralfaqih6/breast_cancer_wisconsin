@@ -12,7 +12,7 @@ The objective of this analysis is to develop and evaluate classification models 
 Business Case<br>
 Stakeholders<br>
 Project Goals & Milestones<br>
-Methods and Results<br>
+Project Report<br>
 Considerations and Risk Management<br>
 Recommendations<br>
 Team Members<br>
@@ -64,10 +64,9 @@ graph TD;
     I-->J(["Top 5 Most Important Features"]);
     J-->K(["Recommendations"]);
 ```
+# Project Report
 
-## Methods and Results
-
-# Models Selection
+## Models Selection
 Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 6 potential ML models listed below:
   - logistic regression
   - Support Vector Machine (SVM)
@@ -83,7 +82,7 @@ Among these listed models, the team had chosen 4 models for our project. These m
  - K-Nearest Neighbours (KNN)
 
 
-# About the data
+## Dataset Analysis
 The Wisconsin Diagnostic Breast Cancer (WDBC) dataset was designed to distinguish between benign and malignant tumors using image-derived features. It contains 569 patient records and 32 variables, including an ID, diagnosis label, and 30 numeric features computed from fine‑needle aspirate (FNA) images of breast masses. Each of the 30 features represents three summary statistics (mean, standard error, and the “worst” or largest value) across 10 nuclear characteristics such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension.
 
 [!NOTE]
@@ -99,15 +98,13 @@ The dataset consists of a total of 569 instances of breast cancer, categorized i
 > [!NOTE]
 > The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 
-
-# Exploratory data analysis
-Missingness check
+### Dataset Cleanup check
 An assessment of missing values across all variables in the dataset revealed that there are no missing values in any column. This ensures the dataset is complete and suitable for downstream analyses without the need for imputation or data cleaning related to missingness.
 
 Distribution of Features
 Histograms of all 30 numerical features reveal a variety of distribution shapes, highlighting key characteristics of the dataset. Most features, including area_mean, perimeter_mean, radius_mean, and their corresponding worst and standard error measures, show right-skewed distributions, indicating a concentration of smaller values with a long tail toward larger values. Similarly, features like concavity_mean, compactness_mean, and concave_points_mean are reflecting that a majority of tumors exhibit low levels of these measures. Some other features such as texture_mean, symmetry_mean, and fractal_dimension_mean are more symmetrically distributed. 
 
-Correlation Analysis
+### Correlation Analysis
 The correlation heatmap shows strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
 Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models. Overall, the strong correlation among some of the features suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy and or reducing multicolinearity isses in the subsequent modeling.
 ![correlation_plot](Plots/correlation_plot.png)
@@ -121,7 +118,7 @@ The boxplot shows the distribution of 12 features between malignant and benign b
 ![box_plots](Plots/Box_Plots.png)
 
 
-## Model setup and selection of best performing classifier
+## Model Development & Training
 In the exploratory analysis, we observed that several features in the dataset were highly correlated. This high correlation indicates strong relationships among certain features, which can lead to redundancy in the dataset and could also introduce multicollinearity issues during model training or downstream analysis. Multicollinearity can distort the interpretation of model coefficients, particularly in models like logistic regression, and may also lead to overfitting in more complex models. To address this, we implemented a correlation thresholding approach where one feature from each highly correlated pair (correlation > 0.90) was removed. This step helps in ensuring that each retained feature contributed unique information to the model while also improving interpretability and robustness of our predictive models.
 
 We performed literature review to identify the most suitable classification algorithm for breast cancer diagnosis using the WDBC dataset. We identified four commonly used classifiers: Logistic Regression, Random Forest, Support Vector Machine (SVM) and KNN. We trained each model on the preprocessed training dataset and assessed their performance on the test set. 
@@ -147,33 +144,33 @@ Reference: Geron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras,
 
 The subsections below describe the Python implementation and evaluation approach for each model.
 
-# Logistic Regression
+### Logistic Regression
 The Logistic Regression model was trained using scikit-learn's LogisticRegression class. The data was split using stratified train-test splitting to ensure balanced class representation. Feature scaling was applied to normalize the inputs.
 ![confusion_matrix_LR](Plots/confusion_matrix_LR.png)
 
 
-# Random Forest Model (RFM)
+### Random Forest Model (RFM)
 The Random Forest Classifier was trained using scikit-learn’s RandomForestClassifier. This ensemble method uses multiple decision trees to improve prediction accuracy and control overfitting.
 ![confusion_matrix_RF](Plots/confusion_matrix_RF.png)
 
 
-# Support Vector Machine (SVM)
+### Support Vector Machine (SVM)
 The SVM model was trained using the radial basis function (RBF) kernel, which is well-suited for non-linear classification tasks. Prior to training, the dataset was scaled using standardization.
 ![confusion_matrix_SVM](Plots/confusion_matrix_SVM.png)
 
 
-# K-Nearest Neighbours (KNN)
+### K-Nearest Neighbours (KNN)
 The KNN classifier was implemented with a default k=5. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
 ![confusion_matrix_KNN](Plots/confusion_matrix_KNN.png)
 
 
-# Performance Evaluation
+## Performance Evaluation
 The comparative performance metrics of the four classification models showed that the Random Forest model consistently performed better across multiple metrics. It showed the highest accuracy (96.5%), indicating its overall correctness in classification. Moreover, it attained balanced precision and recall values of 0.953, resulting in the highest F1 Score (0.953) among the models, reflecting strong performance in both identifying malignant cases and avoiding false positives. The AUC of 0.994 further confirms its excellent discriminatory power between benign and malignant tumors. While Logistic Regression also performed well with an AUC of 0.992 and accuracy of 95.6%, its recall was slightly lower at 0.930. In contrast, the SVM model showed comparatively weaker performance, particularly in recall (0.837), suggesting a higher rate of missed malignant cases. 
 <insert the performance table from four models here>
 ![ROC_Curve_Comparison](Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png)
 
 
-# Training and validation of the Random forest model
+## Choose The Best Performing Model
 Overall, the Random Forest model, which is an ensemble learning method based on constructing multiple decision trees and aggregating their predictions, consistently outperformed the other models across most evaluation criteria, and emerged as the most reliable and well-balanced classifier for this dataset. Given its performance and ability to handle feature interactions and multicollinearity, the Random Forest model was selected as the final model. It was further refined and validated using cross-validation techniques to ensure generalizability and stability before being applied to the testing dataset for final classification.
 
 
@@ -215,7 +212,7 @@ The Random Forest model provided feature importances that helped identify which 
 ![top_10_variables](Plots/top_10_variables.png)
 
 
-# Risks Identified & Considerations
+## Risks Identified & Considerations
 
 The project was a great learning exercise and it truly highlighted how building effective machine learning models goes far beyond algorithm selection. Understanding the data source, identifying its limitations, managing bias and correlation, and selecting the right evaluation metrics are all critical steps toward developing responsible, trustworthy models. Below are some of the risk that we identified with our approach:
 
@@ -246,7 +243,7 @@ In a medical context where accuracy alone is not enough, we used metrics like pr
 Most machine learning models are highly sensitive to the quality and structure of the training data. Noise, missing values, and inconsistent feature scaling can significantly reduce model performance. We ensured rigorous data cleaning, normalization, and outlier handling in our preprocessing pipeline to mitigate this risk.
 
 
-# Summary and implications
+## Recommendations
 
 In this analysis, we developed a Random Forest classification model to predict breast cancer diagnosis (malignant or benign) based on 20 diagnostic features. The model demonstrated strong predictive power on the test data, as shown by a balanced confusion matrix and a high AUC, indicating reliable performance in distinguishing malignant from benign cases.
 
@@ -254,7 +251,7 @@ An examination of feature importance revealed that the top five most influential
 
 This machine learning model could be highly beneficial for clinicians and diagnostic centers by providing an automated, accurate, and fast second-opinion tool to assist in early breast cancer detection. When integrated into diagnostic workflows, it can help flag potentially malignant cases for further review, supporting earlier and more targeted interventions. To maximize its benefit, the model should be validated on local clinical data before deployment and used as a decision support system in combination with expert medical judgment.
 
-# Future Considerations
+## Future Considerations
 
 In our current approach, we selected one model out of the four we tested and identified the top five features based on that model’s performance. However, the models we evaluated had very similar performance levels. If we treat each model as a subject matter expert, then choosing one over the others means favoring a single expert while overlooking others with nearly equal track records.
 
