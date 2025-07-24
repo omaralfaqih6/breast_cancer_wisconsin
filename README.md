@@ -13,7 +13,7 @@ The objective of this analysis is to develop and evaluate classification models 
 [Stakeholders](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#stakeholders)<br>
 [Project Goals](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-goals)<br>
 [Project Flow Chart](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-flow-chart)<br>
-[Project Report]()<br>
+[Project Report](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-report)<br>
 [Considerations and Risk Management]()<br>
 [Recommendations]()<br>
 [Team Members]()<br>
