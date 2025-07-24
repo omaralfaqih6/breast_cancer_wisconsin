@@ -9,13 +9,13 @@ The objective of this analysis is to develop and evaluate classification models 
 
 ## Content
 
-Business Case
-Stakeholders
-Project Goals & Milestones
-Methods and Results
-Considerations and Risk Management
-Recommendations
-Team Members
+Business Case<br>
+Stakeholders<br>
+Project Goals & Milestones<br>
+Methods and Results<br>
+Considerations and Risk Management<br>
+Recommendations<br>
+Team Members<br>
 
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
