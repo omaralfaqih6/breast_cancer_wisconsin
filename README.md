@@ -14,7 +14,7 @@ The objective of this analysis is to develop and evaluate classification models 
 [Project Goals](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-goals)<br>
 [Project Flow Chart](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-flow-chart)<br>
 [Project Report](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-report)<br>
-[Considerations and Risk Management]()<br>
+[Risk Management](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#risks-identified--considerations)<br>
 [Recommendations]()<br>
 [Team Members]()<br>
 
@@ -213,7 +213,7 @@ The Random Forest model provided feature importances that helped identify which 
 ![top_10_variables](Plots/top_10_variables.png)
 
 
-## Risks Identified & Considerations
+## Risk Management
 
 The project was a great learning exercise and it truly highlighted how building effective machine learning models goes far beyond algorithm selection. Understanding the data source, identifying its limitations, managing bias and correlation, and selecting the right evaluation metrics are all critical steps toward developing responsible, trustworthy models. Below are some of the risk that we identified with our approach:
 
