@@ -10,7 +10,7 @@ The objective of this analysis is to develop and evaluate classification models 
 ## Content
 
 Business Case<br>
-Stakeholders<br>
+[Stakeholders](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#stakeholders)<br>
 Project Goals & Milestones<br>
 Project Report<br>
 Considerations and Risk Management<br>
