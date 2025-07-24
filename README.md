@@ -223,11 +223,14 @@ print(top_features)
 ```
 **Output:**
 
-worst concave points    0.155
-worst perimeter         0.138
-worst radius            0.132
-mean concave points     0.110
-mean perimeter          0.080
+| Feature               | Importance Score |
+|-----------------------|------------------|
+| worst concave points  | 0.155            |
+| worst perimeter       | 0.138            |
+| worst radius          | 0.132            |
+| mean concave points   | 0.110            |
+| mean perimeter        | 0.080            |
+
 
 
 # Risks Identified & Considerations
