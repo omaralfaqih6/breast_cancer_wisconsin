@@ -24,18 +24,18 @@ Our business case is focused on leveraging data using machine learning models an
 After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
 |Stakeholder|Interest|
 |:-----:|------|
-|Patients|Patients are at the top of the list as their life is depedent on the accuracy of the diagnosis. The more accuraly diagnozed, patients will receive the required treatment in the shortest period of time, and may be the reason for saving their lives in certain cases.|
+|Patients|Patients are at the top of the list as their life is dependent on the accuracy of the diagnosis. The more accurately diagnosed, patients will receive the required treatment in the shortest period of time, and may be the reason for saving their lives in certain cases.|
 |Clinical doctors|Their interest in the project is knowing the most important features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients.|
 |Medical Equipment Manufactors|This initiative will enable the manufacturers building more optimized diagnostic panels for collecting the data.|
-|Hospital Management|The management are interested in reducing the diagnostics costs and consequentally the patient's treament. This goal of this initiative is firmly aligned with this interest as finding the most important features will result in a more optimized diagnostic approach. This will consequently lead to more accurate diagnostics, better treatment and reduced cost.|
+|Hospital Management|The management is interested in reducing the diagnostics costs and consequently the patient's treatment. This goal of this initiative is firmly aligned with this interest as finding the most important features will result in a more optimized diagnostic approach. This will consequently lead to more accurate diagnostics, better treatment and reduced cost.|
 |Hospital's Legal department | The more optimized diagnostics approach will increase the accuracy of the diagnostic, thereby, avoiding the lawsuits against doctors and the hospital due to consequences of false diagnosis.|
-|Ministry of Health|The accurate disgnostics will reduce the cost and the expenses paid by Public health budget.|
+|Ministry of Health|The accurate diagnostics will reduce the cost and the expenses paid by the public health budget.|
 
 # Project Goals
 The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
  - Explore various models to identify 4 models best fit for the problem.
  - Build 4 models using different machine learning techniques and compare their performance.
- - Identify 3-5 features that are most definitive contributor to the model performance from multiple different models.
+ - Identify 3-5 features that are the most definitive contributor to the model performance from multiple different models.
 
 # Project Flow Chart
 To have a better visualization of the project phases and milestones, our project team had created the below flow chart. In every section, the project team will provide the detailed analysis following the logical flow of the process:
@@ -67,7 +67,7 @@ graph TD;
 # Project Report
 
 ## Models Selection
-Our project team had complete a research on the qualified machine learning models to be using for classifying the dataset. The team had listed 6 potential ML models listed below:
+Our project team had completed a research on the qualified machine learning models to be used for classifying the dataset. The team had listed 6 potential ML models listed below:
   - logistic regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
@@ -105,12 +105,12 @@ Distribution of Features
 Histograms of all 30 numerical features reveal a variety of distribution shapes, highlighting key characteristics of the dataset. Most features, including area_mean, perimeter_mean, radius_mean, and their corresponding worst and standard error measures, show right-skewed distributions, indicating a concentration of smaller values with a long tail toward larger values. Similarly, features like concavity_mean, compactness_mean, and concave_points_mean are reflecting that a majority of tumors exhibit low levels of these measures. Some other features such as texture_mean, symmetry_mean, and fractal_dimension_mean are more symmetrically distributed. 
 
 ### Correlation Analysis
-The correlation heatmap shows strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
-Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models. Overall, the strong correlation among some of the features suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy and or reducing multicolinearity isses in the subsequent modeling.
+The correlation heatmap shows a strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
+Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models. Overall, the strong correlation among some of the features suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy and or reducing multicollinearity issues in the subsequent modeling.
 ![correlation_plot](Plots/correlation_plot.png)
 
-Correlation between features by cancer status
-The plot shows the relationships among the five most correlated features with breast cancer diagnosis (radius_mean, perimeter_mean, radius_worst, area_worst, and perimeter_noest), with samples stratified by diagnostic outcome (malignant vs. benign). Briefly, tumour characteristics such as, radius_mean, perimeter_mean, and area_worst showed a strong linear or almost linear associations with the malignancy, consistent with the expectation that larger tumor dimensions correlate with malignancy. Additionally, malignant cases predominantly occupied higher value ranges across all features compared to benign cases, with minimal overlap in distributions. This suggests robust discriminative power of these features.
+#### Correlation between features by cancer status
+The plot shows the relationships among the five most correlated features with breast cancer diagnosis (radius_mean, perimeter_mean, radius_worst, area_worst, and perimeter_worest), with samples stratified by diagnostic outcome (malignant vs. benign). Briefly, tumour characteristics such as, radius_mean, perimeter_mean, and area_worst showed a strong linear or almost linear association with the malignancy, consistent with the expectation that larger tumor dimensions correlate with malignancy. Additionally, malignant cases predominantly occupied higher value ranges across all features compared to benign cases, with minimal overlap in distributions. This suggests robust discriminative power of these features.
 ![features_correlation_plot](Plots/correlation_plots_features.png)
 
 Distribution of features by cancer status
@@ -119,23 +119,23 @@ The boxplot shows the distribution of 12 features between malignant and benign b
 
 
 ## Model Development & Training
-In the exploratory analysis, we observed that several features in the dataset were highly correlated. This high correlation indicates strong relationships among certain features, which can lead to redundancy in the dataset and could also introduce multicollinearity issues during model training or downstream analysis. Multicollinearity can distort the interpretation of model coefficients, particularly in models like logistic regression, and may also lead to overfitting in more complex models. To address this, we implemented a correlation thresholding approach where one feature from each highly correlated pair (correlation > 0.90) was removed. This step helps in ensuring that each retained feature contributed unique information to the model while also improving interpretability and robustness of our predictive models.
+In the exploratory analysis, we observed that several features in the dataset were highly correlated. This high correlation indicates strong relationships among certain features, which can lead to redundancy in the dataset and could also introduce multicollinearity issues during model training or downstream analysis. Multicollinearity can distort the interpretation of model coefficients, particularly in models like logistic regression, and may also lead to overfitting in more complex models. To address this, we implemented a correlation thresholding approach where one feature from each highly correlated pair (correlation > 0.90) was removed. This step helps in ensuring that each retained feature contributes unique information to the model while also improving interpretability and robustness of our predictive models.
 
 We performed literature review to identify the most suitable classification algorithm for breast cancer diagnosis using the WDBC dataset. We identified four commonly used classifiers: Logistic Regression, Random Forest, Support Vector Machine (SVM) and KNN. We trained each model on the preprocessed training dataset and assessed their performance on the test set. 
 
 The performance of a classification model was evaluated using the following metrics:
 
-Precision:
+### Precision:
 The proportion of correctly predicted positive observations to all predicted positives. High precision indicates a low false positive rate. It is measured as:
-Precision = (True Positives)/(True Positives +False Positives)
+Precision = (True Positives)/(True Positives + False Positives)
 
-Recall: 
+### Recall: 
 The proportion of correctly predicted positives out of all actual positives. It is measured as:
 Recall = (True Positives)/(True Positives + FalseNegatives)
 
-F1-Score:
-The harmonic mean of precision and recall. It balances both metrics and is especially useful when classes are imbalanced. It is measures as:
-F1 =  2 x (Precision x Recall)/(Presision+Recall)
+### F1-Score:
+The harmonic mean of precision and recall. It balances both metrics and is especially useful when classes are imbalanced. It is measured as:
+F1 =  2 x (Precision x Recall)/(Precision+Recall)
 
 AUROC Curve (Area under the Receiver Operating Characteristic Curve):
 Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate (FPR = FP / (FP + TN)) at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.
@@ -221,11 +221,11 @@ The Wisconsin Diagnostic Breast Cancer (WDBC) dataset, commonly used in medical 
 The dataset also has a moderate class imbalance, with 357 benign and 212 malignant cases, potentially skewing outcomes toward the majority class if not addressed. 
 Moreover, it originates from a single institution—the University of Wisconsin Hospitals—introducing geographical and institutional bias that may not reflect diverse patient populations.
 
-Additonally, The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
+Additionally, The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
 This limits its applicability for advanced diagnostic techniques. It also excludes patient demographic details, such as age, genetic factors, or family history, which are critical for personalized diagnostics or subgroup analysis.
 
 2. High Feature Correlation:
-The correlation heatmap shows strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
+The correlation heatmap shows a strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
 Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models.
 This strong multicollinearity among certain groups suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy in subsequent modeling.
 
