@@ -240,9 +240,9 @@ The project was a great learning exercise and it truly highlighted how building 
 1. Sample Dataset Limitations:
 The Wisconsin Diagnostic Breast Cancer (WDBC) dataset, commonly used in medical research, has several notable limitations. It includes only 569 samples, which restricts its representativeness and can lead to less reliable results. 
 The dataset also has a moderate class imbalance, with 357 benign and 212 malignant cases, potentially skewing outcomes toward the majority class if not addressed. 
-Additionally, it originates from a single institution—the University of Wisconsin Hospitals—introducing geographical and institutional bias that may not reflect diverse patient populations.
+Moreover, it originates from a single institution—the University of Wisconsin Hospitals—introducing geographical and institutional bias that may not reflect diverse patient populations.
 
-The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
+Additonally, The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
 This limits its applicability for advanced diagnostic techniques. It also excludes patient demographic details, such as age, genetic factors, or family history, which are critical for personalized diagnostics or subgroup analysis.
 
 
@@ -272,6 +272,14 @@ Most machine learning models are highly sensitive to the quality and structure o
 - In future cancer identification projects, additional data like cell colour, relative position, density, etc. could be added into the dataset - considering the advances in imaging technology from the publication date (1992) to now (2025)
 
 - If we have more time on the project, what can we do more/enhance?
+
+# Future Considerations
+
+In our current approach, we selected one model out of the four we tested and identified the top five features based on that model’s performance. However, the models we evaluated had very similar performance levels. If we treat each model as a subject matter expert, then choosing one over the others means favoring a single expert while overlooking others with nearly equal track records.
+
+Given more time, we would have taken a more holistic approach by analyzing feature importance across all models that achieved over 90% performance. Specifically, we would calculate and compare SHAP values for each of these models to identify features that are consistently important across the board. The idea is that if multiple high-performing models agree on certain features, those are likely to be genuinely influential. Features deemed unimportant by all models would be strong candidates for exclusion, while those with mixed importance rankings would warrant further investigation.
+
+We would also have complemented this analysis with interviews or discussions with subject matter experts to better understand the context and relevance of these variables. Their insights could help validate the model findings and align them with existing research or real-world patterns.
 
 
 # Team members
