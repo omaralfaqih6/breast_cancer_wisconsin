@@ -15,8 +15,9 @@ The objective of this analysis is to develop and evaluate classification models 
 [Project Flow Chart](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-flow-chart)<br>
 [Project Report](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-report)<br>
 [Risk Management](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#risks-identified--considerations)<br>
-[Recommendations]()<br>
-[Team Members]()<br>
+[Recommendations](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#recommendations)<br>
+[Future Considerations](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#future-considerations)<br>
+[Team Members](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#team-members)<br>
 
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
@@ -271,6 +272,3 @@ Below are our team members:
 |Olalekan Oni |https://github.com/oniolalekan |Result Analysis|
 |Kirby Lin|https://github.com/klin093 | KNN, Proofreading| 
 
-# Further Readings
-Below are the links mentioned in this article for further readings and advanced research.
-https://www.semanticscholar.org/paper/Nuclear-feature-extraction-for-breast-tumor-Street-Wolberg/53f0fbb425bc14468eb3bf96b2e1d41ba8087f36
