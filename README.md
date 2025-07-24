@@ -12,10 +12,11 @@ The objective of this analysis is to develop and evaluate classification models 
 [Business Case](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#business-case)<br>
 [Stakeholders](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#stakeholders)<br>
 [Project Goals](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-goals)<br>
-Project Report<br>
-Considerations and Risk Management<br>
-Recommendations<br>
-Team Members<br>
+[Project Flow Chart](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#project-flow-chart)<br>
+[Project Report]()<br>
+[Considerations and Risk Management]()<br>
+[Recommendations]()<br>
+[Team Members]()<br>
 
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
