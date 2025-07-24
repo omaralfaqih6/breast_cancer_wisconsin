@@ -93,6 +93,8 @@ This dataset is representing 30 features for 569 samples derived from digitized 
 Our target variable (the depednent variable) is Diagnosis variable which has either of the below values:
 - M: for malignant
 - B: for benign
+![benign_malignant](Plots/benign_malignant.png)
+
 
 > [!NOTE]
 > The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
@@ -101,6 +103,9 @@ Our target variable (the depednent variable) is Diagnosis variable which has eit
 The team had conducted analysis on the dataset which includes the below:
 1. Ensure that the dataset is clean and had no missing values.
 2. Demonstrated the relationships between the features themselves and also with the target variable.
+![correlation_plot](Plots/correlation_plot.png)
+![features_correlation_plot](Plots/correlation_plots_features.png)
+![box_plots](Plots/Box_Plots.png)
 
 Add the features correlation removal.
 
@@ -111,75 +116,41 @@ The subsections below describe the Python implementation and evaluation approach
 
 ### Logistic Regression
 The Logistic Regression model was trained using scikit-learn's LogisticRegression class. The data was split using stratified train-test splitting to ensure balanced class representation. Feature scaling was applied to normalize the inputs.
-```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix
-
-lr_model = LogisticRegression()
-lr_model.fit(X_train_scaled, y_train)
-y_pred_lr = lr_model.predict(X_test_scaled)
-
-print(confusion_matrix(y_test, y_pred_lr))
-print(classification_report(y_test, y_pred_lr))
-```
-
 Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
+![confusion_matrix_LR](Plots/confusion_matrix_LR.png)
+
 
 ### Random Forest Model (RFM)
 The Random Forest Classifier was trained using scikit-learn’s RandomForestClassifier. This ensemble method uses multiple decision trees to improve prediction accuracy and control overfitting.
-
-```python
-from sklearn.ensemble import RandomForestClassifier
-
-rf_model = RandomForestClassifier()
-rf_model.fit(X_train, y_train)
-y_pred_rf = rf_model.predict(X_test)
-
-print(confusion_matrix(y_test, y_pred_rf))
-print(classification_report(y_test, y_pred_rf))
-```
-
 Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
+![confusion_matrix_RF](Plots/confusion_matrix_RF.png)
 
 
 ### Support Vector Machine (SVM)
 The SVM model was trained using the radial basis function (RBF) kernel, which is well-suited for non-linear classification tasks. Prior to training, the dataset was scaled using standardization.
-```python
-from sklearn.svm import SVC
-
-svm_model = SVC(kernel='rbf')
-svm_model.fit(X_train_scaled, y_train)
-y_pred_svm = svm_model.predict(X_test_scaled)
-
-print(confusion_matrix(y_test, y_pred_svm))
-print(classification_report(y_test, y_pred_svm))
-```
 Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
+![confusion_matrix_SVM](Plots/confusion_matrix_SVM.png)
+
 
 ### K-Nearest Neighbours (KNN)
 The KNN classifier was implemented with a default k=5. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
-```python
-from sklearn.neighbors import KNeighborsClassifier
-
-knn_model = KNeighborsClassifier(n_neighbors=5)
-knn_model.fit(X_train_scaled, y_train)
-y_pred_knn = knn_model.predict(X_test_scaled)
-
-print(confusion_matrix(y_test, y_pred_knn))
-print(classification_report(y_test, y_pred_knn))
-```
 Performance Metrics Evaluated: Accuracy, Precision, Recall, and F1-score
+![confusion_matrix_KNN](Plots/confusion_matrix_KNN.png)
 
 ## Performance Evaluation
 List which model is chosen ( which is RFM)
 After training and evaluating all four models—Logistic Regression, Random Forest (RFM), Support Vector Machine (SVM), and K-Nearest Neighbours (KNN) - the Random Forest Model (RFM) demonstrated the best overall performance across multiple classification metrics. It consistently yielded higher precision, recall, and F1-scores, particularly for the malignant class, which was a key priority in the project due to the serious nature of false negatives in medical diagnoses.
 
 Evaluation was done using the test dataset along with stratified k-fold cross-validation to ensure robust and generalizable results.
+![ROC_Curve_Comparison](Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png)
+![RF_ROC_curve](Plots/random_forest_ROC_curve.png)
+
 
 ## Choose Best Performing Model
 This section defined the criteria the project team had used to select the model (The How!), and provide the technical justification (The Why!).
 Please include the CV 
 Selected Model: Random Forest Model (RFM)
+![RF_performance](Plots/random_forest_performance.png)
 
 ### The How (Selection Criteria):
 The project team defined the following evaluation criteria to guide model selection:
@@ -191,13 +162,7 @@ The project team defined the following evaluation criteria to guide model select
 - **Cross-Validation Score**: To evaluate the model’s generalizability across different subsets of the dataset.
 
 Each model's performance was analyzed using the classification_report, and Stratified K-Fold Cross-Validation (CV) was employed with 5 folds to further validate performance consistency:
-```python
-from sklearn.model_selection import cross_val_score
 
-cv_scores = cross_val_score(rf_model, X, y, cv=5)
-print("Cross-validation scores:", cv_scores)
-print("Mean CV score:", cv_scores.mean())
-```
 **Output:**
 
 ```text
@@ -213,14 +178,7 @@ The Why (Technical Justification):
 
 ## Top 5 Most Important Features
 The Random Forest model provided feature importances that helped identify which features were most influential in making classification decisions. The top 5 most important features in predicting breast cancer (malignant or benign) were:
-```python
-import pandas as pd
 
-# Assuming rf_model and X.columns are already defined
-feature_importances = pd.Series(rf_model.feature_importances_, index=X.columns)
-top_features = feature_importances.sort_values(ascending=False).head(5)
-print(top_features)
-```
 **Output:**
 
 | Feature               | Importance Score |
@@ -232,6 +190,7 @@ print(top_features)
 | mean perimeter        | 0.080            |
 
 
+![top_10_variables](Plots/top_10_variables.png)
 
 # Risks Identified & Considerations
 
