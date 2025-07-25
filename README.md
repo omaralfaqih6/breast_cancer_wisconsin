@@ -285,6 +285,7 @@ The verification python notebook in the data_verification folder is a simple scr
 We check that the source - UC Irvine Data Science Machine Learning Repository - still hosts the same dataset we used, for reproducibility.
 
 MD5 hash of the downloaded Zip file: 97da86fb8aa67b905c88ad6c499f6bd4
+
 MD5 hash of the downloaded Data file: c6dd5a2909808f3a901cf00cfd8dfff0
 
 # Team members
