@@ -96,7 +96,8 @@ The Wisconsin Diagnostic Breast Cancer (WDBC) dataset was designed to distinguis
 > The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
 
 
-Distribution of Diagnosis Outcomes
+Distribution of Diagnosis Outcomes:
+
 The dataset consists of a total of 569 instances of breast cancer, categorized into malignant (M) and benign (B) tumors. Out of these, 357 cases (62.7%) are benign and 212 cases (37.3%) are malignant. 
 <p align="center">
   <img src="./Plots/benign_malignant.png">
