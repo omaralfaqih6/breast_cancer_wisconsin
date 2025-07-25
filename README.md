@@ -187,6 +187,10 @@ The comparative performance metrics of the four classification models showed tha
   <img src="./Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png">
 </p>
 
+The complete table of comparison is below:
+<p align="center">
+  <img src="./Plots/table.png">
+</p>
 
 ## Choose The Best Performing Model
 Overall, the Random Forest model, which is an ensemble learning method based on constructing multiple decision trees and aggregating their predictions, consistently outperformed the other models across most evaluation criteria, and emerged as the most reliable and well-balanced classifier for this dataset. Given its performance and ability to handle feature interactions and multicollinearity, the Random Forest model was selected as the final model. It was further refined and validated using cross-validation techniques to ensure generalizability and stability before being applied to the testing dataset for final classification.
