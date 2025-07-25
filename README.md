@@ -49,7 +49,7 @@ This flowchart below highlights our team's approach. Each section in this report
 
 ```mermaid
 graph TD;
-    A(["Models Selection"]);
+    A(["Literature Review"]);
     B(["Dataset Analysis"]);
     C(["Models Development & Training"]);
     D(["Logistic Regression"]);
@@ -73,7 +73,7 @@ graph TD;
 ```
 # Project Report
 
-## Models Selection
+## Literature Review
 Based on lierature review, our project team qualified following machine learning models popularly used by data scientists on classification problems with small datsets. More details in the note below. The 6 potential ML models thus qualified are listed below:
   - logistic regression
   - Support Vector Machine (SVM)
