@@ -74,7 +74,7 @@ graph TD;
 # Project Report
 
 ## Models Selection
-Our project team had completed a research on the qualified machine learning models to be used for classifying the dataset. The team had listed 6 potential ML models listed below:
+Based on lierature review, our project team qualified following machine learning models popularly used by data scientists on classification problems with small datsets. More details in the note below. The 6 potential ML models thus qualified are listed below:
   - logistic regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
@@ -82,7 +82,7 @@ Our project team had completed a research on the qualified machine learning mode
   - AutoGloun
   - LightGBM
 
-Among these listed models, the team had chosen 4 models for our project. These models are the best fit for small datasets and we will conduct our research and analysis in the upcoming sections:
+Out of the qualified models well suited for small datasets, the project team selected these four because they were covered in the coursework and thus executable within the project timeframe. Our research and analysis using these models will follow in the upcoming sections:
  - logistic regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
@@ -108,7 +108,7 @@ The dataset consists of a total of 569 instances of breast cancer, categorized i
 > [!NOTE]
 > The dataset was downloaded and its analysis were done based on information provided in [Breat Cancer Wisconsin (Diagnostic) paper](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 
-### Dataset Cleanup check
+### Dataset Cleanup Check
 An assessment of missing values across all variables in the dataset revealed that there are no missing values in any column. This ensures the dataset is complete and suitable for downstream analyses without the need for imputation or data cleaning related to missingness.
 
 Distribution of Features
@@ -126,7 +126,7 @@ The plot shows the relationships among the five most correlated features with br
 ![features_correlation_plot](Plots/correlation_plots_features.png)
 
 Distribution of features by cancer status
-The boxplot shows the distribution of 12 features between malignant and benign breast tumor cases. Overall, almost all the features except the fractal_dimension_mean, showed higher higher values in malignant cases compared to benign cases.
+The boxplot shows the distribution of 12 features between malignant and benign breast tumor cases. Overall, almost all the features except the fractal_dimension_mean, showed higher values in malignant cases compared to benign cases.
 <p align="center">
   <img src="./Plots/Box_Plots.png">
 </p>
@@ -134,7 +134,7 @@ The boxplot shows the distribution of 12 features between malignant and benign b
 ## Model Development & Training
 In the exploratory analysis, we observed that several features in the dataset were highly correlated. This high correlation indicates strong relationships among certain features, which can lead to redundancy in the dataset and could also introduce multicollinearity issues during model training or downstream analysis. Multicollinearity can distort the interpretation of model coefficients, particularly in models like logistic regression, and may also lead to overfitting in more complex models. To address this, we implemented a correlation thresholding approach where one feature from each highly correlated pair (correlation > 0.90) was removed. This step helps in ensuring that each retained feature contributes unique information to the model while also improving interpretability and robustness of our predictive models.
 
-We performed literature review to identify the most suitable classification algorithm for breast cancer diagnosis using the WDBC dataset. We identified four commonly used classifiers: Logistic Regression, Random Forest, Support Vector Machine (SVM) and KNN. We trained each model on the preprocessed training dataset and assessed their performance on the test set. 
+As mentioned in the literature review, We shorlisted four commonly used classifiers: Logistic Regression, Random Forest, Support Vector Machine (SVM) and KNN for this project. We trained each model on the preprocessed training dataset and assessed their performance on the test set. 
 
 The performance of a classification model was evaluated using the following metrics:
 
@@ -144,16 +144,14 @@ Precision = (True Positives)/(True Positives + False Positives)
 
 ### Recall: 
 The proportion of correctly predicted positives out of all actual positives. It is measured as:
-Recall = (True Positives)/(True Positives + FalseNegatives)
+Recall = (True Positives)/(True Positives + False Negatives)
 
 ### F1-Score:
 The harmonic mean of precision and recall. It balances both metrics and is especially useful when classes are imbalanced. It is measured as:
-F1 =  2 x (Precision x Recall)/(Precision+Recall)
+F1 =  2 x (Precision x Recall)/(Precision + Recall)
 
 AUROC Curve (Area under the Receiver Operating Characteristic Curve):
-Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate (FPR = FP / (FP + TN)) at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.
-
-Reference: Geron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd ed.). O’Reilly Media.
+Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate (FPR = FP / (FP + TN)) at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.² 
 
 The subsections below describe the Python implementation and evaluation approach for each model.
 
@@ -217,7 +215,7 @@ Selected Model: Random Forest Model (RFM)
 </p>
 
 Why Random Forest Model?
-- The Random Forest Model: had the highest cross-validation score (mean ≈ 96.5%), outperforming the other models.
+- The Random Forest Model had the highest cross-validation score (mean ≈ 96.5%), outperforming other models.
 - It is more robust to outliers and less sensitive to feature scaling.
 - It handles feature importance natively, allowing for deeper insights into the most predictive variables.
 - It also showed excellent balance in precision and recall, reducing both false positives and false negatives—crucial in breast cancer diagnosis.
@@ -228,13 +226,13 @@ The Random Forest model provided feature importances that helped identify which 
 
 **Output:**
 
-| Feature               | Importance Score |
-|-----------------------|------------------|
-| worst concave points  | 0.155            |
-| worst perimeter       | 0.138            |
-| worst radius          | 0.132            |
-| mean concave points   | 0.110            |
-| mean perimeter        | 0.080            |
+                                       | Feature               | Importance Score |
+                                       |-----------------------|------------------|
+                                       | worst concave points  | 0.155            |
+                                       | worst perimeter       | 0.138            |
+                                       | worst radius          | 0.132            |
+                                       | mean concave points   | 0.110            |
+                                       | mean perimeter        | 0.080            |
 
 
 <p align="center">
@@ -246,31 +244,23 @@ The Random Forest model provided feature importances that helped identify which 
 
 The project was a great learning exercise and it truly highlighted how building effective machine learning models goes far beyond algorithm selection. Understanding the data source, identifying its limitations, managing bias and correlation, and selecting the right evaluation metrics are all critical steps toward developing responsible, trustworthy models. Below are some of the risk that we identified with our approach:
 
-1. Sample Dataset Limitations:
-The Wisconsin Diagnostic Breast Cancer (WDBC) dataset, commonly used in medical research, has several notable limitations. It includes only 569 samples, which restricts its representativeness and can lead to less reliable results. 
-The dataset also has a moderate class imbalance, with 357 benign and 212 malignant cases, potentially skewing outcomes toward the majority class if not addressed. 
-Moreover, it originates from a single institution—the University of Wisconsin Hospitals—introducing geographical and institutional bias that may not reflect diverse patient populations.
+1. Dataset Limitations:
+The Wisconsin Diagnostic Breast Cancer (WDBC) dataset, widely used in medical research, has key limitations. It contains only 569 samples, limiting representativeness and reliability. A moderate class imbalance (357 benign vs. 212 malignant) may skew results if unaddressed. Originating from a single institution, it carries geographical and institutional bias. Additionally, the dataset includes only precomputed measurements from digitized fine needle aspirates(FNA), not raw images or histopathology slides, restricting its applicaility for advanced diagnostic use.
 
-Additionally, The dataset lacks imaging data, providing only precomputed measurements from digitized fine needle aspirate (FNA) samples, such as texture, smoothness, and symmetry, rather than raw images or histopathology slides. 
-This limits its applicability for advanced diagnostic techniques. It also excludes patient demographic details, such as age, genetic factors, or family history, which are critical for personalized diagnostics or subgroup analysis.
-
-2. High Feature Correlation:
-The correlation heatmap shows a strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
-Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models.
-This strong multicollinearity among certain groups suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy in subsequent modeling.
+2. Measurement and Data Acquisition Bias:
+The features in this dataset are derived from digitized images, meaning that inconsistencies in measurement devices, individuals involved, resolution and lighting could also affect data quality. This variability can introduce noise, reducing the reliability and repeatability of predictions.
 
 3. Missing Human-centered Attributes from the Data:
 While the dataset provides detailed physical features of the tumor cells, it lacks important features such as patient history, genetics, lifestyle factors, and dietary habits. These human-centered attributes can significantly influence diagnostic outcomes and their absence could limit the real-world accuracy and fairness of the model.
 
-4. Measurement and Data Acquisition Bias:
-The features in this dataset are derived from digitized images, meaning that inconsistencies in measurement devices, individuals involved, resolution and lighting could also affect data quality. This variability can introduce noise, reducing the reliability and repeatability of predictions.
+4. High Feature Correlation:
+The correlation heatmap shows a strong relationship between some of the features in the dataset. Most notably, radius_mean, perimeter_mean, and area_mean are highly correlated with each other, forming a distinct cluster with correlation coefficients close to 1. Similarly, their corresponding “worst” and “SE” measures also show strong correlations. Features such as concavity_mean, concave_points_mean, and compactness_mean are also correlated, indicating they may essentially represent the same information. 
+Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models.
+This strong multicollinearity among certain groups suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy in subsequent modeling.
 
 5. Model Selection and Evaluation Strategy:
 While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees, support vector machines (SVM) and KNN. To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
 In a medical context where accuracy alone is not enough, we used metrics like precision, recall, F1-score, and ROC-AUC, especially to minimize false negatives, where a malignant tumor might be misclassified as benign—an outcome that carries serious clinical risk.
-
-6. Dependency on Data Quality:
-Most machine learning models are highly sensitive to the quality and structure of the training data. Noise, missing values, and inconsistent feature scaling can significantly reduce model performance. We ensured rigorous data cleaning, normalization, and outlier handling in our preprocessing pipeline to mitigate this risk.
 
 
 ## Recommendations
@@ -303,4 +293,5 @@ Below are our team members:
 # Citations
 
 1- Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, Bray F. Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA: A Cancer Journal for Clinicians. 2021;71(3):209–249. https://doi.org/10.3322/caac.21660
+2- Geron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd ed.). O’Reilly Media.
 
