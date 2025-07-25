@@ -141,11 +141,12 @@ The performance of a classification model was evaluated using the following metr
 
 ### Precision:
 The proportion of correctly predicted positive observations to all predicted positives. High precision indicates a low false positive rate. It is measured as:
+
 $Precision$ = $\frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$
 
 ### Recall: 
 The proportion of correctly predicted positives out of all actual positives. It is measured as:
-Recall = (True Positives)/(True Positives + False Negatives)
+$Recall$ = $\frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$
 
 ### F1-Score:
 The harmonic mean of precision and recall. It balances both metrics and is especially useful when classes are imbalanced. It is measured as:
