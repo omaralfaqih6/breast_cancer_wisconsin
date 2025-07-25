@@ -115,6 +115,7 @@ Texture-related features and measures like fractal_dimension_mean and symmetry_s
 <p align="center">
   <img src="./Plots/correlation_plot.png">
 </p>
+
 #### Correlation between features by cancer status
 The plot shows the relationships among the five most correlated features with breast cancer diagnosis (radius_mean, perimeter_mean, radius_worst, area_worst, and perimeter_worest), with samples stratified by diagnostic outcome (malignant vs. benign). Briefly, tumour characteristics such as, radius_mean, perimeter_mean, and area_worst showed a strong linear or almost linear association with the malignancy, consistent with the expectation that larger tumor dimensions correlate with malignancy. Additionally, malignant cases predominantly occupied higher value ranges across all features compared to benign cases, with minimal overlap in distributions. This suggests robust discriminative power of these features.
 ![features_correlation_plot](Plots/correlation_plots_features.png)
