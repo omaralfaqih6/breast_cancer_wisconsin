@@ -146,11 +146,13 @@ $Precision$ = $\frac{\text{True Positives}}{\text{True Positives} + \text{False 
 
 ### Recall: 
 The proportion of correctly predicted positives out of all actual positives. It is measured as:
+
 $Recall$ = $\frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$
 
 ### F1-Score:
 The harmonic mean of precision and recall. It balances both metrics and is especially useful when classes are imbalanced. It is measured as:
-F1 =  2 x (Precision x Recall)/(Precision + Recall)
+
+$F1$ = $\frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$
 
 AUROC Curve (Area under the Receiver Operating Characteristic Curve):
 Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate (FPR = FP / (FP + TN)) at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.² 
