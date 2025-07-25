@@ -1,7 +1,7 @@
 # Improving Breast Cancer Diagnostics Project
 
-Introduction and Objective
-Breast cancer remains the most commonly diagnosed malignancy among women worldwide and is a leading cause of cancer-related mortality, accounting for over two million new cases annually. Accurate early diagnosis is essential for improving patient outcomes and reducing treatment-associated morbidity. Traditional diagnostic methods-relying on imaging (e.g., mammography, ultrasound) followed by biopsy—are time-consuming, resource-intensive, and may yield ambiguous results, particularly in women with dense breast tissue. These limitations can lead to diagnostic delays, unnecessary biopsies, or missed malignancies, especially in settings with limited access to specialized radiologists or pathologists (Ref: Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, Bray F. Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA: A Cancer Journal for Clinicians. 2021;71(3):209–249. https://doi.org/10.3322/caac.21660). 
+
+Breast cancer remains the most commonly diagnosed malignancy among women worldwide and is a leading cause of cancer-related mortality, accounting for over two million new cases annually. Accurate early diagnosis is essential for improving patient outcomes and reducing treatment-associated morbidity. Traditional diagnostic methods-relying on imaging (e.g., mammography, ultrasound) followed by biopsy—are time-consuming, resource-intensive, and may yield ambiguous results, particularly in women with dense breast tissue. These limitations can lead to diagnostic delays, unnecessary biopsies, or missed malignancies, especially in settings with limited access to specialized radiologists or pathologists.¹
 
 Machine learning (ML) models offer a promising solution to these challenges by enabling automated, fast, and accurate classification of breast tumors using structured clinical or imaging data. Unlike traditional rule-based systems, ML algorithms can learn complex patterns in large datasets and continuously improve with more data. 
 
@@ -24,27 +24,28 @@ Our presentation is hosted in [this location.](./report/improving_breast_cancer_
 
 
 # Business Case
-Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
+Our business case focuses on leveraging machine learning models and methodologies to identify the breast mass features most predictive of a breast cancer diagnosis.
 
 # Stakeholders
-After investigating and analyzing the medical field, we had found that below are the primary stakeholders benefitting from this initiative:
+Our analysis identified the following primary stakeholders who will benefit from this initiative: 
+
 |Stakeholder|Interest|
 |:-----:|------|
-|Patients|Patients are at the top of the list as their life is dependent on the accuracy of the diagnosis. The more accurately diagnosed, patients will receive the required treatment in the shortest period of time, and may be the reason for saving their lives in certain cases.|
-|Clinical doctors|Their interest in the project is knowing the most important features required to predict the cancer will increase the accuracy of diagnosis whether its malignant or benign. Which will lead to better treatment/management for the patients.|
-|Medical Equipment Manufactors|This initiative will enable the manufacturers building more optimized diagnostic panels for collecting the data.|
-|Hospital Management|The management is interested in reducing the diagnostics costs and consequently the patient's treatment. This goal of this initiative is firmly aligned with this interest as finding the most important features will result in a more optimized diagnostic approach. This will consequently lead to more accurate diagnostics, better treatment and reduced cost.|
-|Hospital's Legal department | The more optimized diagnostics approach will increase the accuracy of the diagnostic, thereby, avoiding the lawsuits against doctors and the hospital due to consequences of false diagnosis.|
-|Ministry of Health|The accurate diagnostics will reduce the cost and the expenses paid by the public health budget.|
+|Patients|Patients are the most important stakeholders, as their lives depend on accurate diagnosis. Timely and precise detection enables faster treatment, which can be life-saving in many cases.|
+|Doctors|Doctors are interested in identifying key features that improve diagnostic accuracy, enabling better treatment and patient outcomes.|
+|Medical Equipment Manufactors|This initiative will help manufacturers design more optimized diagnostic panels for data collection.|
+|Hospital Management|The management is interested in reducing diagnostic and treatment costs. This initiative aligns with that goal by identifying key features to enable a more optimized, accurate, and cost-effective diagnostic approach..|
+|Hospital's Legal department | An optimized and evidence based diagnostic approach improves accuracy, reducing the risk of lawsuits from false diagnoses.|
+|Ministry of Health|Accurate diagnostics will reduce costs and ease the burden on the public health budget.|
 
 # Project Goals
-The goal of the project is to identify features that are most predictive of malignant cancer in the Wisconsin Breast Cancer dataset. The dataset features approximately 30 predictor variables associated with each sample. Therefore, The project team shall aim to: 
+This project aims to identify the most predictive features of malignant cancer in the Wisconsin Breast Cancer dataset, which contains around 30 predictor variables per sample. Therefore, The project team shall aim to: 
  - Explore various models to identify 4 models best fit for the problem.
- - Build 4 models using different machine learning techniques and compare their performance.
+ - Build 4 models using different machine learning techniques and choose the best based on performance.
  - Identify 3-5 features that are the most definitive contributor to the model performance from multiple different models.
 
 # Project Flow Chart
-To have a better visualization of the project phases and milestones, our project team had created the below flow chart. In every section, the project team will provide the detailed analysis following the logical flow of the process:
+This flowchart below highlights our team's approach. Each section in this report provides further details on each of these elements in order:
 
 ```mermaid
 graph TD;
@@ -298,4 +299,8 @@ Below are our team members:
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis|
 |Olalekan Oni |https://github.com/oniolalekan |Result Analysis|
 |Kirby Lin|https://github.com/klin093 | KNN, Proofreading| 
+
+# Citations
+
+1- Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, Bray F. Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA: A Cancer Journal for Clinicians. 2021;71(3):209–249. https://doi.org/10.3322/caac.21660
 
