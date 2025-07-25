@@ -82,12 +82,13 @@ Based on lierature review, our project team qualified following machine learning
   - AutoGloun
   - LightGBM
 
-Out of the qualified models well suited for small datasets, the project team selected these four because they were covered in the coursework and thus executable within the project timeframe. Our research and analysis using these models will follow in the upcoming sections:
+Out of the qualified models well suited for small datasets, the project team selected these four because they were covered in the coursework and thus executable within the project timeframe:
  - Logistic Regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
  - K-Nearest Neighbours (KNN)
 
+Our research and analysis using these models will follow in the upcoming sections.
 
 ## Dataset Analysis
 The Wisconsin Diagnostic Breast Cancer (WDBC) dataset was designed to distinguish between benign and malignant tumors using image-derived features. It contains 569 patient records and 32 variables, including an ID, diagnosis label, and 30 numeric features computed from fine‑needle aspirate (FNA) images of breast masses. Each of the 30 features represents three summary statistics (mean, standard error, and the “worst” or largest value) across 10 nuclear characteristics such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension.
