@@ -19,6 +19,10 @@ The objective of this analysis is to develop and evaluate classification models 
 [Future Considerations](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#future-considerations)<br>
 [Team Members](https://github.com/omaralfaqih6/breast_cancer_wisconsin/blob/main/README.md#team-members)<br>
 
+# Project Showcase Presentation
+Our presentation is hosted in [this location.](./report/improving_breast_cancer_diagnostics_project.pptx)
+
+
 # Business Case
 Our business case is focused on leveraging data using machine learning models and methodologies to investigate and find the features of a breast mass which are the most predictive of breast cancer diagnosis.
 
