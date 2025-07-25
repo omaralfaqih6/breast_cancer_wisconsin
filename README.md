@@ -96,8 +96,7 @@ The Wisconsin Diagnostic Breast Cancer (WDBC) dataset was designed to distinguis
 > The project team read this article that mentioned the comparison between the 5 models that are most suitable and fit for this dataset. The article is found [here](https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets)
 
 
-Distribution of Diagnosis Outcomes:
-
+### Distribution of Diagnosis Outcomes
 The dataset consists of a total of 569 instances of breast cancer, categorized into malignant (M) and benign (B) tumors. Out of these, 357 cases (62.7%) are benign and 212 cases (37.3%) are malignant. 
 <p align="center">
   <img src="./Plots/benign_malignant.png">
@@ -112,7 +111,7 @@ The dataset consists of a total of 569 instances of breast cancer, categorized i
 ### Dataset Cleanup Check
 An assessment of missing values across all variables in the dataset revealed that there are no missing values in any column. This ensures the dataset is complete and suitable for downstream analyses without the need for imputation or data cleaning related to missingness.
 
-Distribution of Features
+### Distribution of Features
 Histograms of all 30 numerical features reveal a variety of distribution shapes, highlighting key characteristics of the dataset. Most features, including area_mean, perimeter_mean, radius_mean, and their corresponding worst and standard error measures, show right-skewed distributions, indicating a concentration of smaller values with a long tail toward larger values. Similarly, features like concavity_mean, compactness_mean, and concave_points_mean are reflecting that a majority of tumors exhibit low levels of these measures. Some other features such as texture_mean, symmetry_mean, and fractal_dimension_mean are more symmetrically distributed. 
 
 ### Correlation Analysis
@@ -126,7 +125,7 @@ Texture-related features and measures like fractal_dimension_mean and symmetry_s
 The plot shows the relationships among the five most correlated features with breast cancer diagnosis (radius_mean, perimeter_mean, radius_worst, area_worst, and perimeter_worest), with samples stratified by diagnostic outcome (malignant vs. benign). Briefly, tumour characteristics such as, radius_mean, perimeter_mean, and area_worst showed a strong linear or almost linear association with the malignancy, consistent with the expectation that larger tumor dimensions correlate with malignancy. Additionally, malignant cases predominantly occupied higher value ranges across all features compared to benign cases, with minimal overlap in distributions. This suggests robust discriminative power of these features.
 ![features_correlation_plot](Plots/correlation_plots_features.png)
 
-Distribution of features by cancer status
+### Distribution of features by cancer status
 The boxplot shows the distribution of 12 features between malignant and benign breast tumor cases. Overall, almost all the features except the fractal_dimension_mean, showed higher values in malignant cases compared to benign cases.
 <p align="center">
   <img src="./Plots/Box_Plots.png">
