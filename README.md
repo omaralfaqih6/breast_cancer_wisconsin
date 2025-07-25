@@ -279,6 +279,13 @@ Given more time, we would have taken a more holistic approach by analyzing featu
 
 We would also have complemented this analysis with interviews or discussions with subject matter experts to better understand the context and relevance of these variables. Their insights could help validate the model findings and align them with existing research or real-world patterns.
 
+# Data Verification
+
+The verification python notebook in the data_verification folder is a simple script used to check the integrity and validity of the data source.
+We check that the source - UC Irvine Data Science Machine Learning Repository - still hosts the same dataset we used, for reproducibility.
+
+MD5 hash of the downloaded Zip file: 97da86fb8aa67b905c88ad6c499f6bd4
+MD5 hash of the downloaded Data file: c6dd5a2909808f3a901cf00cfd8dfff0
 
 # Team members
 Below are our team members:
@@ -288,7 +295,7 @@ Below are our team members:
 |Omar Alfaqih|https://github.com/omaralfaqih6/ | Documentation, Model Optimization|
 |Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis, Future Considerations and Documentation|
 |Olalekan Oni |https://github.com/oniolalekan |Result Analysis|
-|Kirby Lin|https://github.com/klin093 | KNN, Proofreading| 
+|Kirby Lin|https://github.com/klin093 | KNN, Data Verification| 
 
 # Citations
 
