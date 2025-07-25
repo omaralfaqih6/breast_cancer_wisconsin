@@ -121,8 +121,9 @@ The plot shows the relationships among the five most correlated features with br
 
 Distribution of features by cancer status
 The boxplot shows the distribution of 12 features between malignant and benign breast tumor cases. Overall, almost all the features except the fractal_dimension_mean, showed higher higher values in malignant cases compared to benign cases.
-![box_plots](Plots/Box_Plots.png)
-
+<p align="center">
+  <img src="./Plots/Box_Plots.png">
+</p>
 
 ## Model Development & Training
 In the exploratory analysis, we observed that several features in the dataset were highly correlated. This high correlation indicates strong relationships among certain features, which can lead to redundancy in the dataset and could also introduce multicollinearity issues during model training or downstream analysis. Multicollinearity can distort the interpretation of model coefficients, particularly in models like logistic regression, and may also lead to overfitting in more complex models. To address this, we implemented a correlation thresholding approach where one feature from each highly correlated pair (correlation > 0.90) was removed. This step helps in ensuring that each retained feature contributes unique information to the model while also improving interpretability and robustness of our predictive models.
@@ -152,28 +153,35 @@ The subsections below describe the Python implementation and evaluation approach
 
 ### Logistic Regression
 The Logistic Regression model was trained using scikit-learn's LogisticRegression class. The data was split using stratified train-test splitting to ensure balanced class representation. Feature scaling was applied to normalize the inputs.
-![confusion_matrix_LR](Plots/confusion_matrix_LR.png)
-
+<p align="center">
+  <img src="./Plots/confusion_matrix_LR.png">
+</p>
 
 ### Random Forest Model (RFM)
 The Random Forest Classifier was trained using scikit-learn’s RandomForestClassifier. This ensemble method uses multiple decision trees to improve prediction accuracy and control overfitting.
-![confusion_matrix_RF](Plots/confusion_matrix_RF.png)
-
+<p align="center">
+  <img src="./Plots/confusion_matrix_FR.png">
+</p>
 
 ### Support Vector Machine (SVM)
 The SVM model was trained using the radial basis function (RBF) kernel, which is well-suited for non-linear classification tasks. Prior to training, the dataset was scaled using standardization.
-![confusion_matrix_SVM](Plots/confusion_matrix_SVM.png)
-
+<p align="center">
+  <img src="./Plots/confusion_matrix_SVM.png">
+</p>
 
 ### K-Nearest Neighbours (KNN)
 The KNN classifier was implemented with a default k=5. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
-![confusion_matrix_KNN](Plots/confusion_matrix_KNN.png)
-
+<p align="center">
+  <img src="./Plots/confusion_matrix_KNN.png">
+</p>
 
 ## Performance Evaluation
 The comparative performance metrics of the four classification models showed that the Random Forest model consistently performed better across multiple metrics. It showed the highest accuracy (96.5%), indicating its overall correctness in classification. Moreover, it attained balanced precision and recall values of 0.953, resulting in the highest F1 Score (0.953) among the models, reflecting strong performance in both identifying malignant cases and avoiding false positives. The AUC of 0.994 further confirms its excellent discriminatory power between benign and malignant tumors. While Logistic Regression also performed well with an AUC of 0.992 and accuracy of 95.6%, its recall was slightly lower at 0.930. In contrast, the SVM model showed comparatively weaker performance, particularly in recall (0.837), suggesting a higher rate of missed malignant cases. 
 <insert the performance table from four models here>
-![ROC_Curve_Comparison](Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png)
+#![ROC_Curve_Comparison](Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png)
+<p align="center">
+  <img src="./Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png">
+</p>
 
 
 ## Choose The Best Performing Model
@@ -182,7 +190,10 @@ Overall, the Random Forest model, which is an ensemble learning method based on 
 
 The final model achieved consistently high AUROC scores across all five folds, ranging from 0.9776 to 0.9964, with a mean cross-validated AUROC of 0.9852, indicating excellent discriminative ability during training. 
 When evaluated on the independent test set, the model maintained strong performance with an overall accuracy of 96%. Both classes (benign and malignant) were predicted with high precision and recall—97% for benign and 95% for malignant cases—resulting in balanced F1-scores of 0.97 and 0.95, respectively. Additionally, the model achieved an AUROC of 0.9941 on the test set, further confirming its capability to accurately distinguish between the two diagnostic categories. Overall, these results suggest that the breast cancer features can be used to reliably and accurately classify breast cancer from benign nodules using Random Forest model.
-![RF_ROC_curve](Plots/random_forest_ROC_curve.png)
+<p align="center">
+  <img src="./Plots/random_forest_ROC_curve.png">
+</p>
+
 
 **Output:**
 
@@ -192,7 +203,9 @@ Mean CV score: 0.9648505778822908
 ```
 
 Selected Model: Random Forest Model (RFM)
-![RF_performance](Plots/random_forest_performance.png)
+<p align="center">
+  <img src="./Plots/random_forest_performance.png">
+</p>
 
 Why Random Forest Model?
 - The Random Forest Model: had the highest cross-validation score (mean ≈ 96.5%), outperforming the other models.
@@ -215,7 +228,9 @@ The Random Forest model provided feature importances that helped identify which 
 | mean perimeter        | 0.080            |
 
 
-![top_10_variables](Plots/top_10_variables.png)
+<p align="center">
+  <img src="./Plots/top_10_variables.png">
+</p>
 
 
 ## Risk Management
