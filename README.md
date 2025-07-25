@@ -75,7 +75,7 @@ graph TD;
 
 ## Literature Review
 Based on lierature review, our project team qualified following machine learning models popularly used by data scientists on classification problems with small datsets. More details in the note below. The 6 potential ML models thus qualified are listed below:
-  - logistic regression
+  - Logistic Regression
   - Support Vector Machine (SVM)
   - Random Forest Model (RFM)
   - K-Nearest Neighbours (KNN)
@@ -83,7 +83,7 @@ Based on lierature review, our project team qualified following machine learning
   - LightGBM
 
 Out of the qualified models well suited for small datasets, the project team selected these four because they were covered in the coursework and thus executable within the project timeframe. Our research and analysis using these models will follow in the upcoming sections:
- - logistic regression
+ - Logistic Regression
  - Support Vector Machine (SVM)
  - Random Forest Model (RFM)
  - K-Nearest Neighbours (KNN)
