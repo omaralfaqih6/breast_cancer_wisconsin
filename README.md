@@ -174,7 +174,7 @@ The SVM model was trained using the radial basis function (RBF) kernel, which is
 </p>
 
 ### K-Nearest Neighbours (KNN)
-The KNN classifier was implemented with a default k=5. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
+The KNN classifier was implemented with a k=19 after using the GridSearchCV with 5-fold CV to find the optimal K value. Feature scaling was crucial for this distance-based model. The performance of KNN was evaluated on the same test set used for the other models.
 <p align="center">
   <img src="./Plots/confusion_matrix_KNN.png">
 </p>
