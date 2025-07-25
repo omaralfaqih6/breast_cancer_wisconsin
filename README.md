@@ -161,7 +161,7 @@ The Logistic Regression model was trained using scikit-learn's LogisticRegressio
 ### Random Forest Model (RFM)
 The Random Forest Classifier was trained using scikit-learn’s RandomForestClassifier. This ensemble method uses multiple decision trees to improve prediction accuracy and control overfitting.
 <p align="center">
-  <img src="./Plots/confusion_matrix_FR.png">
+  <img src="./Plots/confusion_matrix_RF.png">
 </p>
 
 ### Support Vector Machine (SVM)
