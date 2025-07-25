@@ -141,7 +141,7 @@ The performance of a classification model was evaluated using the following metr
 
 ### Precision:
 The proportion of correctly predicted positive observations to all predicted positives. High precision indicates a low false positive rate. It is measured as:
-Precision = $\frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$
+$Precision$ = $\frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$
 
 ### Recall: 
 The proportion of correctly predicted positives out of all actual positives. It is measured as:
