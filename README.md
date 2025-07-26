@@ -271,7 +271,7 @@ In a medical context where accuracy alone is not enough, we used metrics like pr
 
 In this analysis, we developed a Random Forest classification model to predict breast cancer diagnosis (malignant or benign) based on 20 diagnostic features. The model demonstrated strong predictive power on the test data, as shown by a balanced confusion matrix and a high AUC, indicating reliable performance in distinguishing malignant from benign cases.
 
-An examination of feature importance revealed that the top five most influential features in predicting malignancy were worst concave points, mean concave points, worst perimeter, worst radius, and worst area. These features are related to the shape and size of the cell nuclei and are known to be strongly associated with tumor aggressiveness. Their prominence in the model is in line with clinical understanding of breast cancer pathology, lending further credibility to the model’s performance.
+An examination of feature importance revealed that the top five most influential features in predicting malignancy were worst concave points, mean concave points, worst perimeter, worst radius, and worst area. These features are related to the shape and size of the cell nuclei and are known to be strongly associated with tumor aggressiveness³. Their prominence in the model is in line with clinical understanding of breast cancer pathology, lending further credibility to the model’s performance.
 
 This machine learning model could be highly beneficial for clinicians and diagnostic centers by providing an automated, accurate, and fast second-opinion tool to assist in early breast cancer detection. When integrated into diagnostic workflows, it can help flag potentially malignant cases for further review, supporting earlier and more targeted interventions. To maximize its benefit, the model should be validated on local clinical data before deployment and used as a decision support system in combination with expert medical judgment.
 
@@ -307,5 +307,7 @@ Below are our team members:
 1- Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, Bray F. Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA: A Cancer Journal for Clinicians. 2021;71(3):209–249. https://doi.org/10.3322/caac.21660
 
 2- Geron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd ed.). O’Reilly Media.
+
+3- Geron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd ed.). O’Reilly Media.
 
 
