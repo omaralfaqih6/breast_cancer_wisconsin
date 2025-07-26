@@ -154,8 +154,8 @@ The harmonic mean of precision and recall. It balances both metrics and is espec
 
 $F1$ = $\frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$
 
-AUROC Curve (Area under the Receiver Operating Characteristic Curve):
-Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate (FPR = FP / (FP + TN)) at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.² 
+### AUROC Curve:
+Receiver Operating Characteristic Curve is a graphical representation of the diagnostic ability of a binary classifier by plotting the True Positive Rate (Recall) against the False Positive Rate ($FPR$ = $\frac{\text{FP}}{\text{FP} + \text{TN}}$ at various threshold levels. A model that performs better than random guessing will have a curve that bows towards the top-left corner. AUC (Area Under the ROC Curve) is a value summarizing the entire ROC curve. AUC ranges from 0 to 1 and a higher AUC value reflects better model performance.² 
 
 The subsections below describe the Python implementation and evaluation approach for each model.
 
