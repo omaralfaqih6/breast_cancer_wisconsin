@@ -262,11 +262,6 @@ The correlation heatmap shows a strong relationship between some of the features
 Texture-related features and measures like fractal_dimension_mean and symmetry_se show relatively weak correlations with most other variables. These weaker correlations may point to independent information that could be valuable in prediction models.
 This strong multicollinearity among certain groups suggests dimensionality reduction techniques or feature selection might be beneficial for reducing redundancy in subsequent modeling.
 
-5. Model Selection and Evaluation Strategy:
-While the original study used MSM-T, we evaluated several modern models, including logistic regression, decision trees, support vector machines (SVM) and KNN. To handle uncertainty and improve robustness, we performed cross-validation and hyperparameter tuning across different algorithms.
-In a medical context where accuracy alone is not enough, we used metrics like precision, recall, F1-score, and ROC-AUC, especially to minimize false negatives, where a malignant tumor might be misclassified as benign—an outcome that carries serious clinical risk.
-
-
 ## Recommendations
 
 In this analysis, we developed a Random Forest classification model to predict breast cancer diagnosis (malignant or benign) based on 20 diagnostic features. The model demonstrated strong predictive power on the test data, as shown by a balanced confusion matrix and a high AUC, indicating reliable performance in distinguishing malignant from benign cases.
@@ -277,11 +272,11 @@ This machine learning model could be highly beneficial for clinicians and diagno
 
 ## Future Considerations
 
-In our current approach, we selected one model out of the four we tested and identified the top five features based on that model’s performance. However, the models we evaluated had very similar performance levels. If we treat each model as a subject matter expert, then choosing one over the others means favoring a single expert while overlooking others with nearly equal track records.
+Given more time, we would adopt a more comprehensive approach. Initially, we would apply dimensionality reduction techniques like Principal Component Analysis (PCA) to reduce the dataset's dimensions to 10-15 features. This step would help us address potential feature redundancy, as some of the top features—while not highly correlated—are likely addressing the same underlying dimension of the dataset. By reducing the dimensionality, we could improve the model’s interpretability and possibly uncover new insights that aren’t as apparent in the higher-dimensional space.
 
-Given more time, we would have taken a more holistic approach by analyzing feature importance across all models that achieved over 90% performance. Specifically, we would calculate and compare SHAP values for each of these models to identify features that are consistently important across the board. The idea is that if multiple high-performing models agree on certain features, those are likely to be genuinely influential. Features deemed unimportant by all models would be strong candidates for exclusion, while those with mixed importance rankings would warrant further investigation.
+After this reduction, we would reintroduce the four models, applying SHAP values to analyze and compare feature importance across all models that performed above 90%. If multiple high-performing models consistently highlight the same features, those are likely the most influential. Features consistently deemed unimportant across models would be strong candidates for exclusion, while those showing mixed importance would warrant deeper investigation.
 
-We would also have complemented this analysis with interviews or discussions with subject matter experts to better understand the context and relevance of these variables. Their insights could help validate the model findings and align them with existing research or real-world patterns.
+By adopting this approach, we would not only improve the model’s robustness but also gain a clearer understanding of the most important variables driving our predictions.
 
 # Data Verification
 
