@@ -292,6 +292,10 @@ MD5 hash of the downloaded Zip file: 97da86fb8aa67b905c88ad6c499f6bd4
 
 MD5 hash of the downloaded Data file: c6dd5a2909808f3a901cf00cfd8dfff0
 
+# Commit and Review Approach
+
+We used a different approach to merge changes into the main branch as compared to what was suggested by the course module staff. We createad seperate branches one each for the major artefacts: the report, the python notebook and the data verification. All team members directly merged into these branches and once all of us confirmed to have reviewed the individual artefacts, they were all merged into the main branch. So, some team members may or may not have pull requests and merge requests associated with them as expected by the course module staff. We are grateful to all our team members for the amazing team work and coordination.
+
 # Team members
 Below are our team members:
 |Name|GitHub|Roles|Contribution Video|
