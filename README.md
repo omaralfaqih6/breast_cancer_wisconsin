@@ -297,7 +297,7 @@ Below are our team members:
 |:--:|:--:|:--:|:--:|
 |Sanjeev Budhathoki|https://github.com/budsans | Exploratory data analysis, Model training and evaluation, Report writing|
 |Omar Alfaqih|https://github.com/omaralfaqih6/ | Project Management, Documentation, Model Optimization| [Video](https://drive.google.com/file/d/1nTpzZPEA4j_efIYyEyp2j_MPFeziwuiB/view?usp=drive_link)|
-|Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis, Future Considerations and Documentation|
+|Azhar Hasan|https://github.com/azharhasan|Model Optimization, Risk Analysis, Future Considerations and Documentation| [Video](https://youtu.be/m4cpHjW98Ro)
 |Olalekan Oni |https://github.com/oniolalekan |Result Analysis| [Video](https://drive.google.com/file/d/1rBb4gjaVh5DklXJnIpfGGNGRNj6OvbgT/view?usp=sharing)
 |Kirby Lin|https://github.com/klin093 | KNN, Data Verification| 
 
