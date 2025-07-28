@@ -184,7 +184,7 @@ The KNN classifier was implemented with a k=19 after using the GridSearchCV with
 </p>
 
 ## Performance Evaluation
-The comparative performance metrics of the four classification models showed that the Random Forest model consistently performed better across multiple metrics. It showed the highest accuracy (96.5%), indicating its overall correctness in classification. Moreover, it attained balanced precision and recall values of 0.953, resulting in the highest F1 Score (0.953) among the models, reflecting strong performance in both identifying malignant cases and avoiding false positives. The AUC of 0.994 further confirms its excellent discriminatory power between benign and malignant tumors. While Logistic Regression also performed well with an AUC of 0.992 and accuracy of 95.6%, its recall was slightly lower at 0.930. In contrast, the SVM model showed comparatively weaker performance, particularly in recall (0.837), suggesting a higher rate of missed malignant cases. 
+The comparative performance metrics of the four classification models showed that the Random Forest model consistently performed better across multiple metrics. It showed the highest accuracy (93.9%), indicating its overall correctness in classification. Moreover, it attained balanced precision (0.949) and recall (0.881) values, resulting in the highest F1 Score (0.91) among the models, reflecting strong performance in both identifying malignant cases and avoiding false positives. The AUC of 0.994 further confirms its excellent discriminatory power between benign and malignant tumors. While Logistic Regression also performed well with an AUC of 0.988 and accuracy of 93%, its recall was slightly lower at 0.83. In contrast, the SVM model showed comparatively weaker performance, particularly in recall (0.71), suggesting a higher rate of missed malignant cases. 
 <insert the performance table from four models here>
 <p align="center">
   <img src="./Plots/ROC%20Curve%20-%20LR%20vs%20RFM%20vs%20SVM%20vs%20KNN.png">
@@ -199,8 +199,8 @@ The complete table of comparison is below:
 Overall, the Random Forest model, which is an ensemble learning method based on constructing multiple decision trees and aggregating their predictions, consistently outperformed the other models across most evaluation criteria, and emerged as the most reliable and well-balanced classifier for this dataset. Given its performance and ability to handle feature interactions and multicollinearity, the Random Forest model was selected as the final model. It was further refined and validated using cross-validation techniques to ensure generalizability and stability before being applied to the testing dataset for final classification.
 
 
-The final model achieved consistently high AUROC scores across all five folds, ranging from 0.9776 to 0.9964, with a mean cross-validated AUROC of 0.9852, indicating excellent discriminative ability during training. 
-When evaluated on the independent test set, the model maintained strong performance with an overall accuracy of 96%. Both classes (benign and malignant) were predicted with high precision and recall—97% for benign and 95% for malignant cases—resulting in balanced F1-scores of 0.97 and 0.95, respectively. Additionally, the model achieved an AUROC of 0.9941 on the test set, further confirming its capability to accurately distinguish between the two diagnostic categories. Overall, these results suggest that the breast cancer features can be used to reliably and accurately classify breast cancer from benign nodules using Random Forest model.
+The final model achieved consistently high AUROC scores across all five folds, ranging from 0.9796 to 0.9969, with a mean cross-validated AUROC of 0.9902, indicating excellent discriminative ability during training. 
+When evaluated on the independent test set, the model maintained strong performance with an overall accuracy of 94%. Both classes (benign and malignant) were predicted with high precision and recall resulting in balanced F1-scores of 0.91 and 0.95 for malignant and benign cases, respectively. Additionally, the model achieved an AUROC of 0.9941 on the test set, further confirming its capability to accurately distinguish between the two diagnostic categories. Overall, these results suggest that the breast cancer features can be used to reliably and accurately classify breast cancer from benign nodules using Random Forest model.
 <p align="center">
   <img src="./Plots/random_forest_ROC_curve.png">
 </p>
@@ -209,8 +209,8 @@ When evaluated on the independent test set, the model maintained strong performa
 **Output:**
 
 ```text
-Cross-validation scores: [0.96491228 0.94736842 0.98245614 0.96491228 0.96460177]
-Mean CV score: 0.9648505778822908
+Cross-validation scores: [0.99303406 0.99690402 0.99690402 0.97961816 0.98477812]
+Mean CV score: 0.9902
 ```
 
 Selected Model: Random Forest Model (RFM)
@@ -219,7 +219,7 @@ Selected Model: Random Forest Model (RFM)
 </p>
 
 Why Random Forest Model?
-- The Random Forest Model had the highest cross-validation score (mean ≈ 96.5%), outperforming other models.
+- The Random Forest Model had the highest cross-validation score (mean ≈ 94%), outperforming other models.
 - It is more robust to outliers and less sensitive to feature scaling.
 - It handles feature importance natively, allowing for deeper insights into the most predictive variables.
 - It also showed excellent balance in precision and recall, reducing both false positives and false negatives—crucial in breast cancer diagnosis.
@@ -232,11 +232,11 @@ The Random Forest model provided feature importances that helped identify which 
 
                                        | Feature               | Importance Score |
                                        |-----------------------|------------------|
-                                       | worst concave points  | 0.155            |
-                                       | worst perimeter       | 0.138            |
-                                       | worst radius          | 0.132            |
-                                       | mean concave points   | 0.110            |
-                                       | mean perimeter        | 0.080            |
+                                       | radius mean           | 0.225            |
+                                       | concavity worst       | 0.150            |
+                                       | concavity mean        | 0.129            |
+                                       | radius se             | 0.084            |
+                                       | compactness mean      | 0.075            |
 
 
 <p align="center">
@@ -266,7 +266,7 @@ This strong multicollinearity among certain groups suggests dimensionality reduc
 
 In this analysis, we developed a Random Forest classification model to predict breast cancer diagnosis (malignant or benign) based on 20 diagnostic features. The model demonstrated strong predictive power on the test data, as shown by a balanced confusion matrix and a high AUC, indicating reliable performance in distinguishing malignant from benign cases.
 
-An examination of feature importance revealed that the top five most influential features in predicting malignancy were worst concave points, mean concave points, worst perimeter, worst radius, and worst area. These features are related to the shape and size of the cell nuclei and are known to be strongly associated with tumor aggressiveness³. Their prominence in the model is in line with clinical understanding of breast cancer pathology, lending further credibility to the model’s performance.
+An examination of feature importance revealed that the top five most influential features in predicting malignancy were radius mean, concavity worst, concavity mean, radius se, and compactness mean. These features are related to the shape and size of the cell nuclei and are known to be strongly associated with tumor aggressiveness³. Their prominence in the model is in line with clinical understanding of breast cancer pathology, lending further credibility to the model’s performance.
 
 This machine learning model could be highly beneficial for clinicians and diagnostic centers by providing an automated, accurate, and fast second-opinion tool to assist in early breast cancer detection. When integrated into diagnostic workflows, it can help flag potentially malignant cases for further review, supporting earlier and more targeted interventions. To maximize its benefit, the model should be validated on local clinical data before deployment and used as a decision support system in combination with expert medical judgment.
 
